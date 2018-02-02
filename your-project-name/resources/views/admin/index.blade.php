@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -272,6 +273,12 @@
 
 
         <!-- 内容区域 -->
+=======
+@extends('admin/gonggong')
+@section('content')
+        <!-- 内容区域 -->
+
+>>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
         <div class="tpl-content-wrapper">
 
             <div class="container-fluid am-cf">
@@ -406,7 +413,11 @@
                             <div class="achievement-subheading">
                                 月度最佳员工
                             </div>
+<<<<<<< HEAD
                             <img class="achievement-image" src="assets/img/user07.png" alt="">
+=======
+                            <img class="achievement-image" src="/b/img/user07.png" alt="">
+>>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
                             <div class="achievement-description">
                                 禁言小张在
                                 <strong>30天内</strong> 禁言了
@@ -519,6 +530,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
     </div>
     <script src="assets/js/amazeui.min.js"></script>
@@ -529,3 +541,7 @@
 </body>
 
 </html>
+=======
+  
+@endsection
+>>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
