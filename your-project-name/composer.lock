@@ -1506,12 +1506,17 @@
             "dist": {
                 "type": "zip",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
                 "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
 =======
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
 >>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+=======
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+>>>>>>> 8877b43ff84aa5aa98df77ca68524609d903290e
                 "shasum": ""
             },
             "require": {
@@ -1570,12 +1575,17 @@
             "dist": {
                 "type": "zip",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/ebc999ce5f14204c5150b9bd15f8f04e621409d8",
                 "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8",
 =======
                 "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/265fc96795492430762c29be291a371494ba3a5b",
                 "reference": "265fc96795492430762c29be291a371494ba3a5b",
 >>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+=======
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/ebc999ce5f14204c5150b9bd15f8f04e621409d8",
+                "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8",
+>>>>>>> 8877b43ff84aa5aa98df77ca68524609d903290e
                 "shasum": ""
             },
             "require": {
@@ -1631,12 +1641,17 @@
             "dist": {
                 "type": "zip",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/e17c808ec4228026d4f5a8832afa19be85979563",
                 "reference": "e17c808ec4228026d4f5a8832afa19be85979563",
 =======
                 "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/6e719200c8e540e0c0effeb31f96bdb344b94176",
                 "reference": "6e719200c8e540e0c0effeb31f96bdb344b94176",
 >>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+=======
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/e17c808ec4228026d4f5a8832afa19be85979563",
+                "reference": "e17c808ec4228026d4f5a8832afa19be85979563",
+>>>>>>> 8877b43ff84aa5aa98df77ca68524609d903290e
                 "shasum": ""
             },
             "require": {
