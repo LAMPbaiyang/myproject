@@ -10,7 +10,21 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+// 首页
 Route::get('/', function () {
-    return view('welcome');
+    return view('home/index');
 });
+
+
+// 后台首页
+Route::get('/demo', 'admin\indexController@index');
+
+
+// 前台列表页
+Route::get('/list', 'home\listController@index');
+
+// 前台详情页
+Route::get('/play', 'home\playController@index');
+
+//搜索列表页
+Route::get('/search','home\searchController@index');
