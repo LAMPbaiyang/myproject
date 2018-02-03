@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('home/index');
 });
-<<<<<<< HEAD
+
 
 
 // 后台首页
@@ -29,7 +29,7 @@ Route::get('/play', 'home\playController@index');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
-=======
+
 // 前台
 Route::get('/homes', 'home\zhucheController@index');
 
@@ -53,4 +53,4 @@ Route::get('/ad_column', 'admin\ad_columnController@index');
 Route::get('/ad_ink', 'admin\ad_inkController@index');
 // 上传管理
 Route::get('/ad_upload', 'admin\ad_uploadController@index');
->>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+

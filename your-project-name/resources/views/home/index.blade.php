@@ -3,28 +3,40 @@
 @section('content')
 
  <div class="wrapper" id="wrapper_slideBox">
-  <div class="hd Switch_operation">
-   <ul class=" clearfix">
-   <li><a href="#"><img src="/homes/images/x-banner1.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   <li><a href="#"><img src="/homes/images/x-banner2.jpg" /><span></span></a></li>
-   </ul>
-  </div>
-  <div class="bd">
-   <ul>
-    <li style="background:url(/homes/images/banner2.jpg) no-repeat center; text-align:center; height:600px;"><a href="#" class=""></a></li>
-    <li style="background:url(/homes/images/banaer.png) no-repeat center; text-align:center; height:600px;"><a href="#" class=""></a></li>
-   </ul>
-  </div>
+  
+ 
  </div>
  <script>jQuery("#wrapper_slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:1000});</script>
 </div>
+
+
+<div class="col-md-12 column" style="margin-top:35px;">
+      <div class="carousel slide" id="carousel-658587">
+        <ol class="carousel-indicators">
+          <li class="active" data-slide-to="0" data-target="#carousel-658587">
+          </li>
+          <li data-slide-to="1" data-target="#carousel-658587">
+          </li>
+          <li data-slide-to="2" data-target="#carousel-658587">
+          </li>
+        </ol>
+        <div class="carousel-inner" style="box-shadow:0 0 5px 1px gray; border-radius:5px;" class="carousel-inner" role="listbox">
+          <div class="item active"  >
+            <img alt="" src="/homes/images/banner2.jpg" />
+           
+          </div>
+          <div class="item">
+            <img alt="" src="/homes/images/banaer.png" />
+           
+          </div>
+          <div class="item">
+            <img alt="" src="/homes/images/banner2.jpg" />
+          </div>
+        </div></span></a>
+      </div>
+    </div>
+ 
+
 <div class="home_style  Channel">
 <!--栏目-->
  <div class="home_Column_style">
