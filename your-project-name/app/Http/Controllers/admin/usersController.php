@@ -1,22 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\admins;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class registerController extends Controller
+// use App\Http\Model\user_info;
+
+class usersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function register()
-    {
-        return view ('admins/register');
+    public function index()
+    {	
+		// $res = user_info::find(1)->users;
+		// dd($res);
+        return view('admins/users/users_index');
     }
 
     /**
@@ -26,7 +30,7 @@ class registerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins/users/users_add');
     }
 
     /**

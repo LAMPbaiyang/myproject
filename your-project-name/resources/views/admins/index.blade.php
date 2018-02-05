@@ -136,7 +136,7 @@
                             <div class="achievement-subheading">
                                 月度最佳员工
                             </div>
-                            <img class="achievement-image" src="/admins/img/user07.png" alt="">
+                            <img class="achievement-image" src="/houtai/img/user07.png" alt="">
                             <div class="achievement-description">
                                 禁言小张在
                                 <strong>30天内</strong> 禁言了
@@ -251,10 +251,10 @@
         </div>
     </div>
     </div>
-    <script src="/admins/js/amazeui.min.js"></script>
-    <script src="/admins/js/amazeui.datatables.min.js"></script>
-    <script src="/admins/js/dataTables.responsive.min.js"></script>
-    <script src="/admins/js/app.js"></script>
+    <script src="/houtai/js/amazeui.min.js"></script>
+    <script src="/houtai/js/amazeui.datatables.min.js"></script>
+    <script src="/houtai/js/dataTables.responsive.min.js"></script>
+    <script src="/houtai/js/app.js"></script>
 
 </body>
 

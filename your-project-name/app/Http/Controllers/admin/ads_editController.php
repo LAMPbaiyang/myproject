@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\admins;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class error404Controller extends Controller
+class ads_editController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class error404Controller extends Controller
      */
     public function index()
     {
-        return view('admins/404');
+        return view('admins/ads_edit');
     }
 
     /**

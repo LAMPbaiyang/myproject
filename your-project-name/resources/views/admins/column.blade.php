@@ -154,10 +154,10 @@
         </div>
     </div>
     </div>
-    <script src="/admins/js/amazeui.min.js"></script>
-    <script src="/admins/js/amazeui.datatables.min.js"></script>
-    <script src="/admins/js/dataTables.responsive.min.js"></script>
-    <script src="/admins/js/app.js"></script>
+    <script src="/houtai/js/amazeui.min.js"></script>
+    <script src="/houtai/js/amazeui.datatables.min.js"></script>
+    <script src="/houtai/js/dataTables.responsive.min.js"></script>
+    <script src="/houtai/js/app.js"></script>
 
 </body>
 

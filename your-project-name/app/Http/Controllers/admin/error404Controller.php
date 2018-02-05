@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\admins;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class columnController extends Controller
+class error404Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class columnController extends Controller
      */
     public function index()
     {
-        return view('admins/column');
+        return view('admins/404');
     }
 
     /**

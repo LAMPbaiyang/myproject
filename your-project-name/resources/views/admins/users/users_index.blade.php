@@ -19,7 +19,7 @@
                                 <div class="widget-title am-fl">
 									 <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> <a href="{{url('admin/users/create')}}">新增</a></button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> <a href="{{url('admins/users/create')}}">新增</a></button>
                                                 
                                             </div>
                                         </div>
@@ -91,10 +91,10 @@
             </div>
         </div>
 
-    <script src="/admins/js/amazeui.min.js"></script>
-    <script src="/admins/js/amazeui.datatables.min.js"></script>
-    <script src="/admins/js/dataTables.responsive.min.js"></script>
-    <script src="/admins/js/app.js"></script>
+    <script src="/houtai/js/amazeui.min.js"></script>
+    <script src="/houtai/js/amazeui.datatables.min.js"></script>
+    <script src="/houtai/js/dataTables.responsive.min.js"></script>
+    <script src="/houtai/js/app.js"></script>
 
 
 

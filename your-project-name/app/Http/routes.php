@@ -11,46 +11,48 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ Route::get('/', function () {
+     return view('welcome');
+ });
 
 
 //后台主页
-Route::get('admin', 'admins\indexController@index');
+// Route::get('admins', 'admin\indexController@index');
 
 //后台登陆
-//Route::get('login','admins\loginController@login');
-Route::get('login',function(){
+//Route::get('admins/login','admin\loginController@login');
+Route::get('admins/login',function(){
 	return view('admins/login');
 });
 
 //后台注册
-Route::get('register','admins\registerController@register');
+Route::get('admins/register','admin\registerController@register');
 
 //后台404
-Route::get('404','admins\error404Controller@index');
+Route::get('404','admin\error404Controller@index');
 
 
 //后台视频管理
-//Route::get('videoedit','admins\videoeditController@index');
+//Route::get('admins/videoedit','admin\videoeditController@index');
 
 
 //后台视频上传管理
-//Route::get('videoupload','admins\videouploadController@index');
+//Route::get('videoupload','admin\videouploadController@index');
 
 //后台栏目管理
-//Route::get('column','admins\columnController@index');
+//Route::get('column','admin\columnController@index');
 
 //广告轮播管理
-//Route::get('ads_edit','admins\ads_editController@index');
+//	Route::get('admins/ads_edit','admin\ads_editController@index');
 
 //用户管理
-//Route::resource('admin/users','admins\usersController');
+//Route::resource('admins/users','admin\usersController');
 
 
 
-Route::group(['prefix'=>'admin','namespace'=>'admins'],function(){
+Route::group(['prefix'=>'admins','namespace'=>'admin'],function(){
+	// 后台主页
+	Route::get('/', 'indexController@index');
 	//用户管理
 	Route::resource('users','usersController');
 	//后台视频管理

@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\admins;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-// use App\Http\Model\user_info;
-
-class usersController extends Controller
+class columnController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +15,8 @@ class usersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {	
-		// $res = user_info::find(1)->users;
-		// dd($res);
-        return view('admins/users/users_index');
+    {
+        return view('admins/column');
     }
 
     /**
@@ -30,7 +26,7 @@ class usersController extends Controller
      */
     public function create()
     {
-        return view('admins/users/users_add');
+        //
     }
 
     /**

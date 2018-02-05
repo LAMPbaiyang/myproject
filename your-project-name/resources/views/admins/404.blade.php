@@ -2,7 +2,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>老司机404网站模板|404网页源码 - 代码库</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('admins/css/dmaku.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('houtai/css/dmaku.css') }}" />
 </head>
 
 <body style="background:#0186a7;">

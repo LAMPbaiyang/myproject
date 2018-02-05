@@ -10,25 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="/admins/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/admins/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="/houtai/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/houtai/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <script src="/admins/js/echarts.min.js"></script>
-    <link rel="stylesheet" href="/admins/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/admins/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="/admins/css/app.css">
-    <script src="/admins/js/jquery.min.js"></script>
+    <script src="/houtai/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="/houtai/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/houtai/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="/houtai/css/app.css">
+    <script src="/houtai/js/jquery.min.js"></script>
 
 </head>
 
 <body data-type="index">
-    <script src="/admins/js/theme.js"></script>
+    <script src="/houtai/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;"><img src="/admins/img/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="/houtai/img/logo.png" alt=""></a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
@@ -64,7 +64,7 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="/admins/img/user04.png" alt="">
+                                            <img src="/houtai/img/user04.png" alt="">
                                         </div>
                                         <div class="menu-messages-time">
                                             3小时前
@@ -83,7 +83,7 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="/admins/img/user02.png" alt="">
+                                            <img src="/houtai/img/user02.png" alt="">
                                         </div>
                                         <div class="menu-messages-time">
                                             5天前
@@ -189,7 +189,7 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="/admins/img/user04.png" alt="">
+                        <img src="/houtai/img/user04.png" alt="">
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
@@ -203,7 +203,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-heading">龙腾TV</li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admin')}}" class="active">
+                    <a href="{{url('admins')}}" class="active">
                         <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                     </a>
                 </li>
@@ -213,20 +213,20 @@
                     </a>
                 </li>
                  <li class="sidebar-nav-link">
-                    <a href="{{url('admin/users')}}">
+                    <a href="{{url('admins/users')}}">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 用户管理
                        
                     </a>
                     
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admin/videoedit')}}">
+                    <a href="{{url('admins/videoedit')}}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 视频管理
 
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admin/videoupload')}}">
+                    <a href="{{url('admins/videoupload')}}">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传管理
 
                     </a>
@@ -234,12 +234,12 @@
 
                <!--  <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li> -->
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admin/column')}}">
+                    <a href="{{url('admins/column')}}">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 栏目管理
                     
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admin/ads_edit')}}">
+                    <a href="{{url('admins/ads_edit')}}">
                         <i class="am-icon-clone sidebar-nav-link-logo"></i> 轮播图管理
                        
                     </a>
@@ -255,13 +255,13 @@
                     </a>
                 </li>
                  <li class="sidebar-nav-link">
-                    <a href="{{url('register')}}">
+                    <a href="{{url('admins/register')}}">
                         <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册
                        
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('login')}}">
+                    <a href="{{url('admins/login')}}">
                         <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
                     </a>
                 </li>

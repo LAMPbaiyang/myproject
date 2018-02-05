@@ -10,18 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="/admins/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/admins/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="/houtai/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/houtai/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="/admins/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/admins/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="/admins/css/app.css">
-    <script src="/admins/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/houtai/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/houtai/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="/houtai/css/app.css">
+    <script src="/houtai/js/jquery.min.js"></script>
 
 </head>
 
 <body data-type="login">
-    <script src="/admins/js/theme.js"></script>
+    <script src="/houtai/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 风格切换 -->
         <div class="tpl-skiner">
@@ -86,8 +86,8 @@
             </div>
         </div>
     </div>
-    <script src="/admins/js/amazeui.min.js"></script>
-    <script src="/admins/js/app.js"></script>
+    <script src="/houtai/js/amazeui.min.js"></script>
+    <script src="/houtai/js/app.js"></script>
 
 </body>
 

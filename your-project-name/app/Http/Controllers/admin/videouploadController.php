@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\admins;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class videoeditController extends Controller
+class videouploadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class videoeditController extends Controller
      */
     public function index()
     {
-        return view('admins/videoedit');
+        return view('admins/videoupload');
     }
 
     /**

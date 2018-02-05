@@ -41,7 +41,7 @@
                                         <tbody>
                                             <tr class="gradeX">
                                                 <td>
-                                                    <img src="/admins/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">张鹏飞</td>
@@ -58,7 +58,7 @@
                                             </tr>
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/admins/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">有适配微信小程序的计划吗</td>
                                                 <td class="am-text-middle">天纵之人</td>                                              
@@ -75,7 +75,7 @@
                                             </tr>
                                             <tr class="gradeX">
                                                 <td>
-                                                    <img src="/admins/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">请问有没有amazeui 分享插件</td>
                                                 <td class="am-text-middle">王宽师</td>                                              
@@ -92,7 +92,7 @@
                                             </tr>
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/admins/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">关于input输入框的问题</td>
                                                 <td class="am-text-middle">着迷</td>                                               
@@ -134,8 +134,8 @@
         </div>
     </div>
     </div>
-    <script src="/admins/js/amazeui.min.js"></script>
-    <script src="/admins/js/app.js"></script>
+    <script src="/houtai/js/amazeui.min.js"></script>
+    <script src="/houtai/js/app.js"></script>
 
 </body>
 
