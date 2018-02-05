@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class indexController extends Controller
 {
@@ -16,7 +17,14 @@ class indexController extends Controller
      */
     public function index()
     {
-       return view('home/list');
+       $data = DB::table('shop_goods')->get();
+       
+       return view('home/list', ['data' => $data]);
+    }
+
+    public function demo()
+    {
+        dd(11111);
     }
 
     /**

@@ -14,7 +14,7 @@
 
 <body class="background_color">
 <div id="header_top">
-<div class="page_header navbar-fixed-top">
+<div class="page_header  navbar-fixed-top">
  <div class="header_style">
   <div class="clearfix">
     <a href="#" class="logo_style"><img src="/homes/images/logo.png"  width="150px"/></a>
@@ -33,13 +33,33 @@
    <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>纪录片</a></li>
    <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>公开课</a></li>
    <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>公开课</a></li>
-   <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>公开课</a></li>
   </ul>
      </div>
      </li>
     </ul>
-    <div class="search_style1">
+
+    <div class="headsearch">
+    <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control"  placeholder="搜索">
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+      </form>
+      <!-- <div style="font-size: 16px"><a href="#">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">开通VIP</a></div> -->
+      <ul class="nav_list">
+          <li class="nav_link"><a href="{{ url('login') }}" class="Channel_name">登录</a></li>
+          <li class="nav_link"><a href="{{ url('register') }}" class="Channel_name">注册</a></li>
+          <li class="nav_link"><a href="#" class="Channel_name">开通VIP</a></li>
+
+      </ul>
+
+    </div>
+    
+   <!--  <div class="search_style1">
+    <form>
       <input name="" type="text"  class="search"/><button name="" type="button" class="button_submit" onclick="submit_btn()"><i class="icon_search"></i>搜索</button>
+      <button></button>
+    </form> -->
    </div>
   </div>
  </div>

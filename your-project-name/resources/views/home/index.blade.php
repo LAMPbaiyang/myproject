@@ -27,17 +27,21 @@
 </div>
 <div class="home_style  Channel">
 <!--栏目-->
+
  <div class="home_Column_style">
  <div class="Column_list clearfix navigation_list">
   <ul class="">
    <li class="Channel_name"><a href="index.tml" ><i class="icon_TV"></i>首页</a></li>
-   <li class="Channel_name1"><a href="list_page.html" ><i class="icon_TV"></i>电影</a></li>
+   <li class="Channel_name1"><a href="list_page.html" ><i class="icon_TV"><!-- {{$v->cname}} -->jjj</i></a></li>
    <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
    <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
    <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>
    <li class="Channel_name5"><a href="#" ><i class="icon_TV"></i>原创视频</a></li>
+ 
   </ul>
   </div>
+
+
   <!--栏目-->
   <div class="Column_list navigation">
   <a href="#" class="w_logo"><img src="/homes/images/logo.png"  width="100%"/></a>
@@ -81,10 +85,10 @@
         <img src="/homes/video/3.jpg"  width="100%"/>
         <span class="first_bg"><i class="icon_bf"></i></span>
        </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
+       <a target="_blank" href="#" class="bq" ></a>
        <div class="tc">
         <p class="tit">
-        <a target="_blank" href="{{ url('play') }}" >轿车sssss公路上行驶被闪kkk电劈中</a></p>
+        <a target="_blank" href="{{ url('play') }}" >轿车公路上行驶被闪kkk电劈中</a></p>
         <p class="des">巨响过后冒出浓烟</p>
        </div>
       </li>

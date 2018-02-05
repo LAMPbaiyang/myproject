@@ -28,3 +28,13 @@ Route::get('/play', 'home\playController@index');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
+
+//登录列表
+Route::get('/login','home\loginController@index');
+
+//注册列表
+Route::get('/register','home\registerController@index');
+
+
+//视频列表
+// Route::resource('/','column\columnController@index');
