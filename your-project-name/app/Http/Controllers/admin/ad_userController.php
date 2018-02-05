@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\support\Facades\Input;
+use Illuminate\Http\JsonResponse;
+use App\Http\Model\users;
+
+
+  
 
 class ad_userController extends Controller
 {
@@ -16,7 +22,10 @@ class ad_userController extends Controller
      */
     public function index()
     {
-          return view('admin/ad_user');
+        $user = users::find(1);
+        $res = $user->contents()->get();
+        dd($user);
+        return view('admin/ad_user',compact('res','user'));
     }
 
     /**
