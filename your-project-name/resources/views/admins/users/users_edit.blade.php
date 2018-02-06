@@ -32,13 +32,14 @@
                             </div>
                             <div class="widget-body am-fr">
 
-                                <form class="am-form tpl-form-border-form tpl-form-border-br" action="{{url('admins/users')}}" method='post'>
+                                <form class="am-form tpl-form-border-form tpl-form-border-br" action="{{url('admins/users/'.$info->uid)}}" method='post'>
+								<input type="hidden" name="_method" value="put">
                                 {{ csrf_field() }}
                               <!--   {{ method_field('PUT') }} -->
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">用户手机号 <span class="tpl-form-line-small-title">tel</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="tel"   id="user-name" placeholder="请输入11为手机号码">
+                                            <input type="text" class="tpl-form-input" name="tel"   id="user-tel" value="{{$info->tel}}" placeholder="">
                                            
                                         </div>
                                     </div>
@@ -46,24 +47,26 @@
                                      <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">用户昵称 <span class="tpl-form-line-small-title">uname</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="uname" id="user-name" placeholder="请输入您的昵称">    
+                                            <input type="text" class="tpl-form-input" name="uname" id="user-name" value="{{$info->uname}}" placeholder="">    
                                         </div>
                                     </div>
-									
+
 									<div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">用户权限 <span class="tpl-form-line-small-title">auth</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="auth" id="user-auth"  placeholder="普通用户请输入1;VIP用户请输入2">    
+                                            <input type="text" class="tpl-form-input" name="auth" id="user-auth" value="{{ ($info->auth==2)?'VIP用户':'普通用户'}}" placeholder="普通用户输入1/VIP用户输入2">    
                                         </div>
                                     </div>
 									<div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-3 am-form-label">用户状态 <span class="tpl-form-line-small-title">auth</span></label>
+                                        <label for="user-name" class="am-u-sm-3 am-form-label">用户状态 <span class="tpl-form-line-small-title">status</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="status" id="user-status"  placeholder="启用用户请输入1;禁用用户请输入0">    
+                                            <input type="text" class="tpl-form-input" name="status" id="user-status" value="{{ ($info->auth==0)?'禁用用户':'启用用户'}}" placeholder="启用用户输入1/禁用用户输入0">    
                                         </div>
                                     </div>
 									
-
+									
+									
+									
                                  <!--    <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">用户密码 <span class="tpl-form-line-small-title">upass</span></label>
                                         <div class="am-u-sm-9">

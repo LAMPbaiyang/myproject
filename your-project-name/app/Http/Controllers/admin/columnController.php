@@ -16,7 +16,7 @@ class columnController extends Controller
      */
     public function index()
     {
-        return view('admins/column');
+        return view('admins/column/column_index');
     }
 
     /**
@@ -26,7 +26,7 @@ class columnController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins/column/column_add');
     }
 
     /**

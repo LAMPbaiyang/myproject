@@ -9,7 +9,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title  am-cf">上传视频表</div>
+                                <div class="widget-title  am-cf">视频管理表</div>
 
 
                             </div>
@@ -19,7 +19,7 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span><a href="{{url('admins/video/create')}}"> 新增</a></button>
                                                 
                                             </div>
                                         </div>
@@ -33,7 +33,7 @@
                                         <thead>
                                             <tr>
                                                 <th>视频缩略图</th>
-                                                <th>视频标题</th>
+                                                <th>视频分类</th>
                                                 <th>视频简介</th>
                                                 <th>上传时间</th>
 												<th>审核状态</th>

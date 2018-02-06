@@ -1,19 +1,19 @@
 <?php
 
-// namespace App\http\model;
+namespace App\http\model;
 
-// use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-// class users extends Model
-// {
-    // public $stable = 'users';
+class users extends Model
+{
+    public $stable = 'users';
 	
-	// public $timestamps = false;
+	public $timestamps = false;
 	
-	// protected $fillable = ['uid','tel','upass'];
+	protected $fillable = ['uid','tel','uname'];
 	
-	 // public function user_info()
-    // {
+	// public function user_info()
+   // {
 
         // return $this->hasOne('App\Http\Model\user_info','uid','id');
     // }
@@ -21,4 +21,5 @@
     // {
 
         // return $this->hasMany('App\Http\Model\contents','uid','id');
-// }
+	// }
+}

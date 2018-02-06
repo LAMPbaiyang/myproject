@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class videoeditController extends Controller
+class videoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class videoeditController extends Controller
      */
     public function index()
     {
-        return view('admins/videoedit');
+        return view('admins/video/video_index');
     }
 
     /**
@@ -26,7 +26,7 @@ class videoeditController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins/video/video_add');
     }
 
     /**

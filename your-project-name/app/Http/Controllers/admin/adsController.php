@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ads_editController extends Controller
+class adsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class ads_editController extends Controller
      */
     public function index()
     {
-        return view('admins/ads_edit');
+        return view('admins/ads/ads_index');
     }
 
     /**
@@ -26,7 +26,7 @@ class ads_editController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins/ads/ads_add');
     }
 
     /**

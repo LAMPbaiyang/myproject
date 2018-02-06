@@ -9,7 +9,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title  am-cf">视频管理表</div>
+                                <div class="widget-title  am-cf">轮播图表</div>
 
 
                             </div>
@@ -19,7 +19,7 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> <a href="{{url('admins/ads/create')}}">新增</a></button>
                                                 
                                             </div>
                                         </div>
@@ -32,12 +32,10 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
-                                                <th>视频缩略图</th>
-                                                <th>视频分类</th>
-                                                <th>视频简介</th>
-                                                <th>上传时间</th>
-												<th>审核状态</th>
-                                                <th>操作</th>
+                                                <th>轮播缩略图</th>
+                                                <th>轮播图名称</th>
+                                                <th>轮播图简介</th>                          
+                                                <th>轮播图操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -47,8 +45,6 @@
                                                 </td>
                                                 <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">张鹏飞</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未通过</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -65,9 +61,7 @@
                                                     <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">有适配微信小程序的计划吗</td>
-                                                <td class="am-text-middle">天纵之人</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">已通过</td>
+                                                <td class="am-text-middle">天纵之人</td>                                              
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -84,9 +78,7 @@
                                                     <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">请问有没有amazeui 分享插件</td>
-                                                <td class="am-text-middle">王宽师</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未审核</td>
+                                                <td class="am-text-middle">王宽师</td>                                              
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
@@ -103,9 +95,7 @@
                                                     <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">关于input输入框的问题</td>
-                                                <td class="am-text-middle">着迷</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未审核</td>
+                                                <td class="am-text-middle">着迷</td>                                               
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">

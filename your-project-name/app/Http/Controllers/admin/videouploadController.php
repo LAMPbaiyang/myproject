@@ -16,7 +16,7 @@ class videouploadController extends Controller
      */
     public function index()
     {
-        return view('admins/videoupload');
+        return view('admins/videoUP/videoUP_index');
     }
 
     /**
@@ -26,7 +26,7 @@ class videouploadController extends Controller
      */
     public function create()
     {
-        //
+         return view('admins/videoUP/videoUP_add');
     }
 
     /**

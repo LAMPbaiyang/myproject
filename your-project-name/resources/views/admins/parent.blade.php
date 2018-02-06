@@ -220,13 +220,13 @@
                     
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admins/videoedit')}}">
+                    <a href="{{url('admins/video')}}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 视频管理
 
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admins/videoupload')}}">
+                    <a href="{{url('admins/videoUP')}}">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传管理
 
                     </a>
@@ -239,7 +239,7 @@
                     
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('admins/ads_edit')}}">
+                    <a href="{{url('admins/ads')}}">
                         <i class="am-icon-clone sidebar-nav-link-logo"></i> 轮播图管理
                        
                     </a>

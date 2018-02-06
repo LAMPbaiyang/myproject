@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-// use App\Http\Model\user_info;
+use App\Http\Model\users;
 
 class usersController extends Controller
 {
@@ -18,9 +18,10 @@ class usersController extends Controller
      */
     public function index()
     {	
-		// $res = user_info::find(1)->users;
-		// dd($res);
-        return view('admins/users/users_index');
+		$users = users::all();
+      
+        //dd($res);
+        return view('admins/users/users_index',compact('users'));
     }
 
     /**
@@ -41,7 +42,18 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $res = $request->input();
+        
+        $res = $request->except('_token');
+        
+        $res = users::insert($res);
+
+         // dd($res);
+        if($res){
+            return redirect('/admins/users')->with('msg','添加成功');
+        }else{
+            return redirect('/admins/create')->with('msg','添加内容失败');
+        }
     }
 
     /**
@@ -61,9 +73,11 @@ class usersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($uid)
     {
-        //
+        $info = users::where('uid',$uid)->first();
+		//dd($info);
+		return view('admins/users/users_edit',compact('info'));
     }
 
     /**
@@ -73,9 +87,15 @@ class usersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $uid)
     {
-        //
+        $res = $request->except('_method','_token');
+		$res = users::where('uid',$uid)->update($res);
+		if($res){
+			return redirect('admins/users')->with('msg','修改成功');
+		}else{
+			return back()->with('error','修改失败');
+		}
     }
 
     /**
@@ -84,8 +104,12 @@ class usersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($uid)
     {
-        //
+        // echo 1111;
+        $res = users::where('uid',$uid)->delete();
+        // dd($res);
+      return $res;
+        
     }
 }

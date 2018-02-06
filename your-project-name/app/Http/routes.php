@@ -53,15 +53,20 @@ Route::get('404','admin\error404Controller@index');
 Route::group(['prefix'=>'admins','namespace'=>'admin'],function(){
 	// 后台主页
 	Route::get('/', 'indexController@index');
+	
 	//用户管理
 	Route::resource('users','usersController');
+	
 	//后台视频管理
-	Route::resource('videoedit','videoeditController');
+	Route::resource('video','videoController');
+	
 	//后台视频上传管理
-	Route::resource('videoupload','videouploadController');
+	Route::resource('videoUP','videouploadController');
+	
 	//后台栏目管理
 	Route::resource('column','columnController');
-	//广告轮播管理
-	Route::resource('ads_edit','ads_editController');
+	
+	//广告轮播图管理
+	Route::resource('ads','adsController');
 
 });
