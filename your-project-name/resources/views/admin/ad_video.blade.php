@@ -18,7 +18,7 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                                <a type="button" class="am-btn am-btn-default am-btn-success" href="{{url('add_upvideo')}}"><span class="am-icon-plus"></span> 新增</a>
                                             </div>
                                         </div>
                                     </div>
@@ -50,6 +50,7 @@
                                         <thead>
                                             <tr>
                                                 <th>所属频道</th>
+                                                <th>视频预览</th>
                                                 <th>视频名称</th>
                                                 <th>上传者</th>
                                                 <th>上传时间</th>
@@ -59,6 +60,7 @@
                                         <tbody>
                                             <tr class="gradeX">
                                                  <td>电影</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">张鹏飞</td>
                                                 <td class="am-text-middle">2016-09-26</td>
@@ -76,6 +78,7 @@
                                             <tr class="even gradeC">
                                                 <td>动漫</td>
                                                 <td class="am-text-middle">有适配微信小程序的计划吗</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">天纵之人</td>
                                                 <td class="am-text-middle">2016-09-26</td>
                                                 <td class="am-text-middle">
@@ -92,6 +95,7 @@
                                             <tr class="gradeX">
                                                  <td>电视剧</td>
                                                 <td class="am-text-middle">请问有没有amazeui 分享插件</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">王宽师</td>
                                                 <td class="am-text-middle">2016-09-26</td>
                                                 <td class="am-text-middle">
@@ -108,6 +112,7 @@
                                             <tr class="even gradeC">
                                                  <td>综艺</td>
                                                 <td class="am-text-middle">关于input输入框的问题</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">着迷</td>
                                                 <td class="am-text-middle">2016-09-26</td>
                                                 <td class="am-text-middle">
@@ -124,6 +129,7 @@
                                             <tr class="even gradeC">
                                                  <td>军事</td>
                                                 <td class="am-text-middle">有没有发现官网上的下载包不好用</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">醉里挑灯看键</td>
                                                 <td class="am-text-middle">2016-09-26</td>
                                                 <td class="am-text-middle">
@@ -141,6 +147,7 @@
                                             <tr class="even gradeC">
                                                 <td>科教</td>
                                                 <td class="am-text-middle">我建议WEB版本文件引入问题</td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">罢了</td>
                                                 <td class="am-text-middle">2016-09-26</td>
                                                 <td class="am-text-middle">

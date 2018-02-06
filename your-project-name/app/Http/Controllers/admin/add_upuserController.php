@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class add_vertisementController extends Controller
+class add_upuserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class add_vertisementController extends Controller
      */
     public function index()
     {
-        return view('admin/add_vertisement');
+        return view('admin/add_upuser');
     }
 
     /**

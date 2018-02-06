@@ -18,22 +18,14 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                 <a type="button" class="am-btn am-btn-default am-btn-success" href="{{url('add_vertisement')}}"><span class="am-icon-plus"></span> 新增</a>
+                                                 <a type="button" class="am-btn am-btn-default am-btn-success" href="{{url('add_upvertisement')}}"><span class="am-icon-plus"></span> 新增</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                     <div class="am-form-group tpl-table-list-select">
-                                        <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
-            </select>
+                                       
                                     </div>
                                 </div>
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
@@ -59,7 +51,7 @@
                                         <tbody>
                                             <tr class="gradeX">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">Amaze UI 模式窗口</td>
                                                 <td class="am-text-middle">张鹏飞</td>
@@ -77,7 +69,7 @@
                                             </tr>
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">有适配微信小程序的计划吗</td>
                                                 <td class="am-text-middle">天纵之人</td>
@@ -95,7 +87,7 @@
                                             </tr>
                                             <tr class="gradeX">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">请问有没有amazeui 分享插件</td>
                                                 <td class="am-text-middle">王宽师</td>
@@ -113,7 +105,7 @@
                                             </tr>
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">关于input输入框的问题</td>
                                                 <td class="am-text-middle">着迷</td>
@@ -131,7 +123,7 @@
                                             </tr>
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">有没有发现官网上的下载包不好用</td>
                                                 <td class="am-text-middle">醉里挑灯看键</td>
@@ -150,7 +142,7 @@
 
                                             <tr class="even gradeC">
                                                 <td>
-                                                    <img src="/b/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
                                                 </td>
                                                 <td class="am-text-middle">我建议WEB版本文件引入问题</td>
                                                 <td class="am-text-middle">罢了</td>

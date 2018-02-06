@@ -33,7 +33,7 @@
                                         <div class="am-u-sm-12 am-margin-top-xs">
                                             <div class="am-form-group am-form-file">
                                                 <div class="tpl-form-file-img">
-                                                    <img src="/b/img/a5.png" alt="">
+                                                    <img src="/houtai/img/a5.png" alt="">
                                                 </div>
                                                 <button type="button" class="am-btn am-btn-danger am-btn-sm ">
                                                     <i class="am-icon-cloud-upload"></i> 添加封面图片</button>

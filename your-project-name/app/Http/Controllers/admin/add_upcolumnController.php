@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ad_uploadController extends Controller
+class add_upcolumnController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class ad_uploadController extends Controller
      */
     public function index()
     {
-         return view('admin/ad_upload');
+        return view('admin/add_upcolumn');
     }
 
     /**

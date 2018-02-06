@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class bgController extends Controller
+class add_upvideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class bgController extends Controller
      */
     public function index()
     {
-       return view('admin/bg');
+        return view('admin/add_upvideo');
     }
 
     /**

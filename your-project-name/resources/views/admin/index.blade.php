@@ -136,7 +136,7 @@
                             <div class="achievement-subheading">
                                 月度最佳员工
                             </div>
-                            <img class="achievement-image" src="/b/img/user07.png" alt="">
+                            <img class="achievement-image" src="/houtai/img/user07.png" alt="">
                             <div class="achievement-description">
                                 禁言小张在
                                 <strong>30天内</strong> 禁言了

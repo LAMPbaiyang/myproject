@@ -16,7 +16,7 @@ class ad_inkController extends Controller
      */
     public function index()
     {
-        echo 1111111;
+        return view('admin/ad_ink');
     }
 
     /**
