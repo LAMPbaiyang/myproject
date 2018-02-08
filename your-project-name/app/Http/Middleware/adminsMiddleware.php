@@ -3,10 +3,14 @@
 namespace App\Http\Middleware;
 
 use Closure;
+
 use Session;
 
 class adminsMiddleware
 {
+
+	// dd(11111111111111);	
+
     /**
      * Handle an incoming request.
      *
@@ -15,11 +19,15 @@ class adminsMiddleware
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
-        if(session('tel')){
-            return $next($request);
-        }else{
-            return redirect('ad_login');
-        }
-    }
+
+    {	
+		//验证用户是否登录   
+       //缓存有数据就继续下一个请求,没数据就重定向登录页面
+		if(session('tel')){
+			return $next($request);
+		}else{
+			return redirect('admins/login');
+		}
+	}
+
 }

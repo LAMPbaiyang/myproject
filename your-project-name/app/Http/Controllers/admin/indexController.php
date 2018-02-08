@@ -15,8 +15,8 @@ class indexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-       return view('home/index');
+    {	
+        return view('admins/index');
 
     }
 
@@ -27,7 +27,7 @@ class indexController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

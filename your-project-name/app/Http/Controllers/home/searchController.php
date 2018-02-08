@@ -16,7 +16,9 @@ class searchController extends Controller
      */
     public function index()
     {
-        return view('home/search');
+
+        return view('homes/search');
+
     }
 
     /**

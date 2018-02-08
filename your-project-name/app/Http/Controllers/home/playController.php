@@ -17,7 +17,9 @@ class playController extends Controller
     public function index()
     {
         //
-        return view('home/play');
+
+        return view('homes/play');
+
     }
 
     /**

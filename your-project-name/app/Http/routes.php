@@ -10,81 +10,108 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// 首页
+
+//引导页
+ // Route::get('/', function () {
+     // return view('welcome');
+ // });
+ 
+ 
+ //======================前台路由=========================================================================
+ 
+ // 首页
 Route::get('/', function () {
-    return view('home/index');
+    return view('homes/index');
 });
 
 
-
-//=================前台=================
-
-// 前台列表页
+// 前台视频列表页
 Route::get('/list', 'home\listController@index');
 
-// 前台详情页
+// 前台视频播放页(详情页)
 Route::get('/play', 'home\playController@index');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
 
-//登录列表
-Route::get('/login','home\loginController@index');
+// 前台注册页
+Route::get('/register', 'home\registerController@index');
 
-//注册列表
-Route::get('/register','home\registerController@index');
+// 前台个人中心页
+Route::get('/center', 'home\centerController@index');
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-//视频列表
-// Route::resource('/','column\columnController@index');
-
-// 前台
-Route::get('/homes', 'home\zhucheController@index');
-
-
-
-
-
-
-//==========后台==============
-
-
-//后台登录页
-
-Route::resource('/ad_login', 'admin\ad_loginController');
-
-//后台验证码
-Route::get('/code', 'admin\ad_loginController@code');
-
-
-
+//====================后台路由===================================================================
+ 
 
 
-
-//视频
-//Route::get('/ad_video', 'admin\ad_videoController@index');
-// 轮播
-//Route::get('/ad_vertisement', 'admin\ad_vertisementController@index');
-//栏目管理
-//Route::get('/ad_column', 'admin\ad_columnController@index');
-// 友情链接
-//Route::get('/ad_ink', 'admin\ad_inkController@index');
-// 上传管理
-//Route::get('/ad_upload', 'admin\ad_uploadController@index');
+//后台主页
+//Route::get('admins','admin\indexController@index');
 
 
 
 
+//后台登陆
+Route::resource('admins/login','admin\loginController');
+
+//后台登录验证码
+Route::get('admins/code','admin\loginController@code');
 
 
-Route::group (['prefix'=>'admin','namespace'=>'admin', 'middleware'=>'admins'],function(){
+//后台注册
+Route::get('admins/register','admin\registerController@register');
 
-		// 后台首页
-		Route::get('/',function(){
-			return view('admin/index');
-		});	
-		//用户管理
-    	Route::resource('ad_user','ad_userController');
+//后台404
+Route::get('404','admin\error404Controller@index');
 
+
+
+
+Route::group(['prefix'=>'admins','namespace'=>'admin','middleware'=>'admins'],function(){
+		
+	//用户后台首页
+	Route::get('/',function(){
+		return view('admins/index');
 	});
+	
+	
+	// 用户管理
+	Route::resource('users','usersController');
+	
+	// 后台视频管理
+	Route::resource('video','videoController');
+	
+	// 后台视频上传管理
+	Route::resource('videoUP','videouploadController');
+	
+	// 后台栏目管理
+	Route::resource('column','columnController');
+	
+	// 广告轮播图管理
+	Route::resource('ads','adsController');
+
+
+});
+
+
+
 

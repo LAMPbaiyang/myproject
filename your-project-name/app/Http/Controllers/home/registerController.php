@@ -16,7 +16,9 @@ class registerController extends Controller
      */
     public function index()
     {
-        return view('home/register');
+
+        return view ('homes/register/index');
+
     }
 
     /**
