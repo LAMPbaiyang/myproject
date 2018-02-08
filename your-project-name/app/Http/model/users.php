@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class users extends Model
 {
-    public $stable = 'users';
+    public $table = 'users';
 	
 	public $timestamps = false;
 	

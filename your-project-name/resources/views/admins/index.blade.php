@@ -255,7 +255,11 @@
     <script src="/houtai/js/amazeui.datatables.min.js"></script>
     <script src="/houtai/js/dataTables.responsive.min.js"></script>
     <script src="/houtai/js/app.js"></script>
-
+	@if (session('msg'))
+	<script>
+		alert("{{ session('msg') }}");
+	</script>
+	@endif
 </body>
 
 </html>

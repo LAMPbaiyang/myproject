@@ -50,7 +50,7 @@
                     <ul>
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="javascript:;">欢迎你, <span>龙腾TV</span> </a>
+                            <a href="javascript:;">龙腾TV, <span></span>欢迎你 </a>
                         </li>
 
                         <!-- 新邮件 -->
@@ -160,7 +160,7 @@
 
                         <!-- 退出 -->
                         <li class="am-text-sm">
-                            <a href="javascript:;">
+                            <a href="{{url('admins/login')}}">
                                 <span class="am-icon-sign-out"></span> 退出
                             </a>
                         </li>
@@ -193,7 +193,7 @@
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-              我是白杨
+              视频项目组
           </span>
                     <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
                 </div>
@@ -209,7 +209,7 @@
                 </li>
                 <li class="sidebar-nav-link">
                     <a href="tables.html">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 管理员管理
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 管理员管理(暂未开放)
                     </a>
                 </li>
                  <li class="sidebar-nav-link">
@@ -246,12 +246,12 @@
                 </li>    
                 <li class="sidebar-nav-link">
                     <a href="404.html">
-                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 友情链接
+                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 友情链接(暂未开放)
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
                     <a href="login.html">
-                        <i class="am-icon-key sidebar-nav-link-logo"></i> 网站配置
+                        <i class="am-icon-key sidebar-nav-link-logo"></i> 网站配置(暂未开放)
                     </a>
                 </li>
                  <li class="sidebar-nav-link">
