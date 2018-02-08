@@ -32,7 +32,7 @@
  <div class="Column_list clearfix navigation_list">
   <ul class="">
    <li class="Channel_name"><a href="index.tml" ><i class="icon_TV"></i>首页</a></li>
-   <li class="Channel_name1"><a href="list_page.html" ><i class="icon_TV"><!-- {{$v->cname}} -->jjj</i></a></li>
+   <li class="Channel_name1"><a href="list_page.html" ><i class="icon_TV">电影</i></a></li>
    <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
    <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
    <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>

@@ -11,11 +11,11 @@
 
 <body>
 <div id="header_top">
-<div class="page_header">
- <div class="header_style">
-  <div class="clearfix">
+<div class="page_header111">
+ <div class="header_style1">
+  <div class="clearfix1">
     
-    <ul class="nav_list">
+    <!-- <ul class="nav_list">
      <li class="nav_link"><a href="index.html" class="Channel_name"><i class="i icon_home"></i>首页</a></li>
      <li class="nav_link Channel_link">
      <a href="javascript:" class="Channel_name"><i class="i icon_nav"></i>频道<i class="i i_arw2"></i></a>
@@ -32,10 +32,10 @@
   </ul>
      </div>
      </li>
-    </ul>
-    <div class="search_style">
+    </ul> -->
+    <!-- <div class="search_style">
       <input name="" type="text"  class="search"/><button name="" type="button" class="button_submit" onclick="submit_btn()"><i class="icon_search"></i>搜索</button>
-   </div>
+   </div> -->
   </div>
  </div>
 </div>

@@ -10,18 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="login/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="login/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="admins/login/css/amazeui.min.css" />
+    <link rel="stylesheet" href="admins/login/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="admins/login/css/app.css">
+    <script src="login/js/jquery.min.js"></script>
+    @if(session('msg'))
+    <script>
 
+    alert('{{session("msg")}}');
+    </script>
+    @endif
 </head>
 
 <body data-type="login">
-    <script src="assets/js/theme.js"></script>
+    <script src="login/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 风格切换 -->
         <div class="tpl-skiner">
@@ -45,14 +50,21 @@
 
 
 
-                <form class="am-form tpl-form-line-form">
+                <form action="{{url('ad_login')}}" class="am-form tpl-form-line-form" method="post">
+                    {{csrf_field()}}
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入账号">
+                        <input type="text" class="tpl-form-input" name="tel" id="user-name" placeholder="请输入手机号">
 
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
+                        <input type="password" name="upass" class="tpl-form-input" id="user-name" placeholder="请输入密码">
+
+                    </div>
+
+                    <div class="am-form-group">
+                        <input type="password" name="code" class="tpl-form-input" id="user-name" placeholder="请输入验证码">
+                        <img src="{{url('code')}}">
 
                     </div>
                     <div class="am-form-group tpl-login-remember-me">
@@ -71,15 +83,15 @@
 
                     <div class="am-form-group">
 
-                        <button type="button" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
+                        <button type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
 
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="assets/js/amazeui.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="login/js/amazeui.min.js"></script>
+    <script src="login/js/app.js"></script>
 
 </body>
 

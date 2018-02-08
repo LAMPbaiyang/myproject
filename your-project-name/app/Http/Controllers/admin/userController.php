@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\users;
 
-use App\Http\Model\user;
-
-class userController extends Controller
+class ad_userController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,6 +18,10 @@ class userController extends Controller
     public function index()
     {
         //
+        $user = users::all();
+        dd($user);
+        // $res = $user->content()->get;
+        return view('admin/users',compact('user'));
     }
 
     /**

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -273,7 +272,6 @@
 
 
         <!-- 内容区域 -->
-=======
 @extends('admin/gonggong')
 @section('content')
         <!-- 内容区域 -->
@@ -530,7 +528,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+
     </div>
     </div>
     <script src="assets/js/amazeui.min.js"></script>
@@ -541,7 +539,4 @@
 </body>
 
 </html>
-=======
-  
-@endsection
->>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+

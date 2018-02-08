@@ -116,7 +116,6 @@
 <!--列表展示-->
 <div class="movielist" id="movie_list">
   <ul class="clearfix">
-  @foreach ($data as $v)
     <li class="movie_theme">
      <i class="icon_b rb_ico"></i>
     <a href="{{url('play')}}" class="movie_img">
@@ -126,11 +125,10 @@
      </span>
     </a>
     <div class="movie_title">
-      <p class="movie_name"><a href="{{url('play')}}" class="name">{{ $v->gname }}</a><span class="status">热播</span></p>
+      <p class="movie_name"><a href="{{url('play')}}" class="name">人民的名义</a><span class="status">热播</span></p>
       <p class="Description">揭秘最深政治生态</p>
      </div>
     </li>
-  @endforeach  
   </ul>
   <!--分页样式-->
    <div class="Paging">

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class article extends Model
 {
     //一对一关系
-    public $table='user';//表名
+    public $table='users';//表名
 
     public function user_info()
     {

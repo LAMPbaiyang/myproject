@@ -16,11 +16,8 @@ class indexController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-       return view('admin/index');
-=======
-            return view('admin/index');
->>>>>>> f38585f239fb3ab775ecb5f0590a51c335417bcc
+       return view('home/index');
+
     }
 
     /**

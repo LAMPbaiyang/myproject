@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\users;
 
 class ad_userController extends Controller
 {
@@ -16,7 +17,10 @@ class ad_userController extends Controller
      */
     public function index()
     {
-          return view('admin/ad_user');
+          $user = users::all();
+        // dd($user);
+        // $res = $user->content()->get;
+        return view('admin/ad_user',compact('user'));
     }
 
     /**
@@ -26,7 +30,7 @@ class ad_userController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/user/users_add');
     }
 
     /**
@@ -38,6 +42,22 @@ class ad_userController extends Controller
     public function store(Request $request)
     {
         //
+        // echo "1111";
+        // $res = $request->input();
+        $res = $request->except('_token');
+        $res = users::insert($res);
+
+        if($res){
+            return redirect('admin/ad_user')->with('msg','添加成功');    
+        }else{
+            return redirect('create')->with('msg','添加失败');
+        }
+        
+
+
+
+        // dd($res);
+
     }
 
     /**
@@ -57,9 +77,11 @@ class ad_userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($uid)
     {
-        //
+        $info = users::where('uid',$uid)->first();
+        // dd($info);
+        return view('admin/user/users_edit',compact('info'));
     }
 
     /**
@@ -69,9 +91,23 @@ class ad_userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $uid)
     {
         //
+        // $res = $request->all();
+        // dd($res);
+
+        $res = $request->except('_method','_token');
+        //dd($res);
+        $res = users::where('uid',$uid)->update($res);
+        // dd($res);
+        
+        if($res){
+            return redirect('admin/ad_user')->with('msg','修改成功');    
+        }else{
+            return redirect('admin/edit')->with('msg','修改失败');
+        }
+        
     }
 
     /**
@@ -82,6 +118,8 @@ class ad_userController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $res = users::where('uid',$id)->delete();
+        return $res;
+        
     }
 }

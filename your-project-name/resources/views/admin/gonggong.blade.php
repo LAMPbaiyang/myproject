@@ -208,7 +208,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('ad_user')}}">
+                    <a href="{{url('admin/ad_user')}}">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 用户管理
                     </a>
                 </li>
@@ -247,12 +247,14 @@
 
             </ul>
         </div>
-        @yield('content')
-    </div>
-    <script src="/b/js/amazeui.min.js"></script>
+
+          <script src="/b/js/amazeui.min.js"></script>
     <script src="/b/js/amazeui.datatables.min.js"></script>
     <script src="/b/js/dataTables.responsive.min.js"></script>
     <script src="/b/js/app.js"></script>
+        @yield('content')
+    </div>
+  
 </body>
 
 </html>
