@@ -1,43 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\home;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+// use App\Http\Model\video;
 
-use Illuminate\Support\Facades\Input;
-use Illuminate\Http\JsonResponse;  
-use App\Http\Model\users;
-//使用model类users.php文件查询数据
-use Gregwar\Captcha\CaptchaBuilder;
-use Session;
-
-class loginController extends Controller
+class indexsController extends Controller
 {
-    /** 
-
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+       // $video = video::all();
+       return view('homes/index');
 
-        return view('admins/login/login');
     }
-
-	 public function code()
-    {
-        $builder = new CaptchaBuilder;
-		$builder->build();
-		
-		session(['code'=>$builder->getPhrase()]);
-		header('Content-type: image/jpeg');
-		$builder->output();
-    }
-	
 
     /**
      * Show the form for creating a new resource.
@@ -57,30 +40,9 @@ class loginController extends Controller
      */
     public function store(Request $request)
     {
-
-		
-		//echo 11111;
-        $res = input::all();
-        $users= users::where('tel',$res['tel'])->first();
-		
-		session(['tel'=>$users->tel]);
-	
-		// if(session('upass') !== $res['upass']){
-			// return back()->with('msg','密码输入错误');
-		// }
-		
-		
-		if(session('code') !== $res['code']){
-        return back()->with('msg','登录失败');
-		
-
-     }
-
-       return redirect('admins')->with('msg','登录成功');
-        
-        
-
+        //
     }
+
     /**
      * Display the specified resource.
      *
@@ -125,5 +87,4 @@ class loginController extends Controller
     {
         //
     }
-
 }

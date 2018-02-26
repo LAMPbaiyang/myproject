@@ -17,7 +17,7 @@ class ad_userController extends Controller
      */
     public function index()
     {
-          $user = users::all();
+        $user = users::all();
         // dd($user);
         // $res = $user->content()->get;
         return view('admin/ad_user',compact('user'));

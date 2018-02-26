@@ -1,25 +1,24 @@
 <?php
 
-namespace App\http\model;
+namespace App\http\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
 class users extends Model
 {
-    public $table = 'users';
-	
-	public $timestamps = false;
-	
-	protected $fillable = ['uid','tel','uname'];
-	
-	// public function user_info()
-   // {
+    //一对一关系
+    public $table='users';//表名
 
-        // return $this->hasOne('App\Http\Model\user_info','uid','id');
-    // }
-    // public function contents()
-    // {
+    protected $fillable = ['uname','tel','upass'];
+    public $timestamps = false;
 
-        // return $this->hasMany('App\Http\Model\contents','uid','id');
+
+ //    public function user_info()
+ //    {
+ //    	return $this->hasOne('App\Http\Model\user_info','uid'，'id');
+	// }
+	// public function content()
+	// {
+	// 	return $this->hasMany('App\Http\Model\user_info','uid'，'id');
 	// }
 }

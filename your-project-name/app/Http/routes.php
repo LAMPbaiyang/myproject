@@ -20,9 +20,7 @@
  //======================前台路由=========================================================================
  
  // 首页
-Route::get('/', function () {
-    return view('homes/index');
-});
+Route::get('/', 'home\indexsController@index');
 
 
 // 前台视频列表页
@@ -39,26 +37,6 @@ Route::get('/register', 'home\registerController@index');
 
 // 前台个人中心页
 Route::get('/center', 'home\centerController@index');
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 //====================后台路由===================================================================
  
