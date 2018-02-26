@@ -16,7 +16,9 @@ class centerController extends Controller
      */
     public function index()
     {
-        return view('homes/center');
+
+       return view('homes/index');
+// indexController.php
     }
 
     /**

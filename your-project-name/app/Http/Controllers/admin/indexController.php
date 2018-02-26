@@ -15,8 +15,10 @@ class indexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {	
-        return view('adminss/index');
+
+    {
+		
+        return view('admins/index');
 
     }
 

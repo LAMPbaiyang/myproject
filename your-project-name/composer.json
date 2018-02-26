@@ -7,7 +7,11 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+<<<<<<< HEAD
 		"gregwar/captcha":"v1.1.3"
+=======
+        "gregwar/captcha": "v1.1.3"
+>>>>>>> cf68cfe616dfc1c2a634759b110e72232bbdf134
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

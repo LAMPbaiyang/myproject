@@ -198,8 +198,31 @@
     <div class="clearfix mb40"> 
      <div class="var_list_fort">
      <ul class="video_list list_v_content">
-  
-      
+     <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+     <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+
       <li class="first_content bg">
        <a href="#" class="pic " target="_blank">
         <img src="/qiantai/video/4.jpg"  width="100%"/>
@@ -208,7 +231,68 @@
        <a target="_blank" href="#" class="bq" >43集</a>
        <div class="tc">
         <p class="tit">
-        <a target="_blank" href="#" >j</a></p>
+
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+      <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+      <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+      <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+      <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >43集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
+        <p class="des">巨响过后冒出浓烟</p>
+       </div>
+      </li>
+      <li class="first_content bg">
+       <a href="#" class="pic " target="_blank">
+        <img src="/qiantai/video/4.jpg"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+       </a>
+       <a target="_blank" href="#" class="bq" >更新4集</a>
+       <div class="tc">
+        <p class="tit">
+        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
         <p class="des">巨响过后冒出浓烟</p>
        </div>
       </li>
@@ -762,5 +846,6 @@
  </div>
 </div>
 </div>
+
 <!--底部样式-->
 @endsection

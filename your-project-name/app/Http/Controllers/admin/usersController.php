@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\Http\Model\users;
 
 class usersController extends Controller
@@ -19,8 +18,7 @@ class usersController extends Controller
     public function index()
     {	
 		$users = users::all();
-      
-        //dd($res);
+
         return view('admins/users/users_index',compact('users'));
     }
 

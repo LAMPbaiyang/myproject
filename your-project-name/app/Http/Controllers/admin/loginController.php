@@ -10,7 +10,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\JsonResponse;  
 use App\Http\Model\users;
-//使用model类users.php文件查询数据
+//使用users数据表查询数据
+
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 
@@ -38,7 +39,6 @@ class loginController extends Controller
 		$builder->output();
     }
 	
-
     /**
      * Show the form for creating a new resource.
      *
@@ -57,30 +57,27 @@ class loginController extends Controller
      */
     public function store(Request $request)
     {
-
 		
 		//echo 11111;
         $res = input::all();
-        $users= users::where('tel',$res['tel'])->first();
-		
+
+		$users= users::where('tel',$res['tel'])->first();
 		session(['tel'=>$users->tel]);
-	
+		
+		
 		// if(session('upass') !== $res['upass']){
 			// return back()->with('msg','密码输入错误');
 		// }
 		
 		
 		if(session('code') !== $res['code']){
-        return back()->with('msg','登录失败');
-		
 
-     }
-
-       return redirect('admins')->with('msg','登录成功');
-        
-        
-
+			return back()->with('msg','登录失败');
+		}
+		return redirect('admins')->with('msg','登录成功');
     }
+
+
     /**
      * Display the specified resource.
      *

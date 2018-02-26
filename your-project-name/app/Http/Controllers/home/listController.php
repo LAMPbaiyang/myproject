@@ -17,8 +17,7 @@ class listController extends Controller
     public function index()
     {
 
-       return view('homes/list');;
-
+       return view('homes/list');
     }
 
     /**

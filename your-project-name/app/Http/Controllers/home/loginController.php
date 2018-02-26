@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;  
+use Illuminate\Support\Facades\Input;
+use App\Http\Model\user;
+use Gregwar\Captcha\CaptchaBuilder;
+use Session;
 
 class loginController extends Controller
 {
@@ -16,8 +21,8 @@ class loginController extends Controller
      */
     public function index()
     {
-        //
-        return view('home/login');
+       
+       return view('homes/login');
     }
 
     /**
@@ -38,7 +43,15 @@ class loginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $res = input::all();
+
+        $user= user::where('name',$res['name'])->first();
+        session(['name'=>$user->name]);
+
+        if(session('codes') !== $res['codes']){
+            return back()->with('msg','登录失败');
+        }
+        return redirect('/')->with('msg','登录成功');
     }
 
     /**
@@ -84,5 +97,14 @@ class loginController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+     public function codes()
+    {
+        $builder = new CaptchaBuilder;
+        $builder->build();
+        session(['codes'=>$builder->getPhrase()]);
+        header('Content-type: image/jpeg');
+        $builder->output();
     }
 }

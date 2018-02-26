@@ -19,7 +19,6 @@ class playController extends Controller
         //
 
         return view('homes/play');
-
     }
 
     /**

@@ -10,7 +10,6 @@ class adminsMiddleware
 {
 
 	// dd(11111111111111);	
-
     /**
      * Handle an incoming request.
      *
@@ -29,5 +28,4 @@ class adminsMiddleware
 			return redirect('admins/login');
 		}
 	}
-
 }

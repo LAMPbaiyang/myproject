@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class registerController extends Controller
 {
@@ -16,9 +17,18 @@ class registerController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD:your-project-name/app/Http/Controllers/admin/listController.php
+       $data = DB::table('shop_goods')->get();
+       
+       return view('home/list', ['data' => $data]);
+    }
 
+    public function demo()
+    {
+        dd(11111);
+=======
         return view ('homes/register/index');
-
+>>>>>>> cf68cfe616dfc1c2a634759b110e72232bbdf134:your-project-name/app/Http/Controllers/home/registerController.php
     }
 
     /**

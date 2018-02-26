@@ -294,6 +294,7 @@ $(function() {
   });
 });
  </script>
+<<<<<<< HEAD:your-project-name/resources/views/homes/play.blade.php
 <script>
 /*********搜索*********/
 function submit_btn(){
@@ -313,6 +314,9 @@ function submit_btn(){
        }
      })   
 }
+=======
+
+>>>>>>> cf68cfe616dfc1c2a634759b110e72232bbdf134:your-project-name/resources/views/homes/play.blade.php
 <!--聊天js-->
  <!-- 全局js -->
  
@@ -321,5 +325,9 @@ function submit_btn(){
 
     <!-- 自定义js -->
     <script src="/qiantai/js/content.min.js?v=1.0.0"></script>
+<<<<<<< HEAD:your-project-name/resources/views/homes/play.blade.php
 </script>
+=======
+
+>>>>>>> cf68cfe616dfc1c2a634759b110e72232bbdf134:your-project-name/resources/views/homes/play.blade.php
 @endsection
