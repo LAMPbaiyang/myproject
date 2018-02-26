@@ -4,8 +4,6 @@
 
  <div class="wrapper" id="wrapper_slideBox">
   
- 
- </div>
  <script>jQuery("#wrapper_slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:1000});</script>
 </div>
 
@@ -32,9 +30,9 @@
           <div class="item">
             <img alt="" src="/qiantai/images/banner2.jpg" />
           </div>
-        </div></span></a>
+        </div>
       </div>
-    </div>
+</div>
  
 
 <div class="home_style  Channel">
@@ -52,29 +50,26 @@
   </div>
   <!--栏目-->
   <div class="Column_list navigation">
-  <a href="#" class="w_logo"><img src="/qiantai/images/logo.png"  width="100%"/></a>
+	<a href="#" class="w_logo"><img src="/qiantai/images/logo.png"  width="100%"/></a>
    <div class="navigatio_name">
      <a href="javascript:" class="mouse-enter"><i class="icon_navigatio"></i>导航</a>
      <div class="navigatio_nav">
-     <ul class=" clearfix">
-   <li class="Channel_name"><a href="#" ><i class="icon_TV"></i>首页</a></li>
-   <li class="Channel_name1"><a href="#" ><i class="icon_TV"></i>电影</a></li>
-   <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
-   <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
-   <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>
-   <li class="Channel_name5"><a href="#" ><i class="icon_TV"></i>原创视频</a></li>
-  </ul>
+		<ul class=" clearfix">
+		   <li class="Channel_name"><a href="#" ><i class="icon_TV"></i>首页</a></li>
+		   <li class="Channel_name1"><a href="#" ><i class="icon_TV"></i>电影</a></li>
+		   <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
+		   <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
+		   <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>
+		   <li class="Channel_name5"><a href="#" ><i class="icon_TV"></i>原创视频</a></li>
+		</ul>
      </div>
    </div>
    <div class="Video_search">
      <input name="" type="text"  class="search"/><button name="" type="button" class=" btn-success button_submit"><i class="icon_search"></i>搜索</button>
-  	
-  
-  </div>
-  
-  
   </div>
  </div>
+</div>
+
  <!--热播精选-->
  <div class="Hot_selection_style Channels">
    <div class="title_name clearfix"><i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>热播精选 <span class="link_name"><a href="#">3月观影指南:炫酷大片不容错过</a>| <a href="#">致命诱惑!这些制服妹子好美</a>|</span></div>
@@ -314,7 +309,9 @@
         <span class="Introduction">
         <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
        <p class="set_number">集数：23集</p>
-        </span> </div><p class="time">上线时间：2017-03-30</p></li>
+        </span> </div>
+		<p class="time">上线时间：2017-03-30</p>
+		</li>
          <li class="video_name">
          <div class="clearfix">
         <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>

@@ -65,7 +65,11 @@
   </div>
  </div>
 </div>
+
 @yield('content')
+
+
+
 <!--底部样式-->
 <div class="footer_style">
 <div class="footer">
