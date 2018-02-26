@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Model\videos;
+
+
 class videoController extends Controller
 {
     /**
@@ -15,8 +18,12 @@ class videoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('admins/video/video_index');
+
+    {   
+        $video = videos::all();
+        // dd($video);
+        return view('admins/video/video_index',compact('video'));
+
     }
 
     /**

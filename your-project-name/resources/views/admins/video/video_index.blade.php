@@ -32,92 +32,37 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
-                                                <th>视频缩略图</th>
+
+                                                <th>视频id</th>
+                                                <th>视频名字</th>
+                                                <th>视频图片</th>
                                                 <th>视频分类</th>
-                                                <th>视频简介</th>
-                                                <th>上传时间</th>
-												<th>审核状态</th>
+												<th>like</th>
                                                 <th>操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                            @foreach($video as $v)
                                             <tr class="gradeX">
-                                                <td>
-                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
-                                                <td class="am-text-middle">张鹏飞</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未通过</td>
+                                                <td class="am-text-middle">{{$v->vid}}</td>
+                                                <td class="am-text-middle">{{$v->vname}}</td>
+                                                <td class="am-text-middle">{{$v->vpic}}</td>
+                                                <td class="am-text-middle">{{$v->vsummary}}</td>
+												<td class="am-text-middle">{{$v->like}}</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i><a href="{{url('admins/video/'.$v->uid.'/edit')}}"> 修改</a>
+                                                    </a>
+                                                    <button id="del" class="am-btn-default am-text-danger" onclick="del({{$v->uid}})">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </button>
+                                                </div>
                                                 </td>
                                             </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">有适配微信小程序的计划吗</td>
-                                                <td class="am-text-middle">天纵之人</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">已通过</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="gradeX">
-                                                <td>
-                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">请问有没有amazeui 分享插件</td>
-                                                <td class="am-text-middle">王宽师</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未审核</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="/houtai/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">关于input输入框的问题</td>
-                                                <td class="am-text-middle">着迷</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-												<td class="am-text-middle">未审核</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                    
+                                             @endforeach
+
                                             <!-- more data -->
                                         </tbody>
                                     </table>
@@ -144,8 +89,10 @@
         </div>
     </div>
     </div>
-    <script src="/houtai/js/amazeui.min.js"></script>
-    <script src="/houtai/js/app.js"></script>
+
+<script src="/houtai/js/amazeui.min.js"></script>
+<script src="/houtai/js/app.js"></script>
+
 
 </body>
 

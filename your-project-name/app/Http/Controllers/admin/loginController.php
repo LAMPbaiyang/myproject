@@ -9,7 +9,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\JsonResponse;  
 use App\Http\Model\users;
-//使用model类users.php文件查询数据
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 

@@ -2,8 +2,8 @@
 @section('视频网站')
 @section('content')
 
- <div class="wrapper" id="wrapper_slideBox">
-  
+ <div class="wrapper" id="wrapper_slideBox"> 
+ 
  <script>jQuery("#wrapper_slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:1000});</script>
 </div>
 
@@ -30,9 +30,11 @@
           <div class="item">
             <img alt="" src="/qiantai/images/banner2.jpg" />
           </div>
+
         </div>
       </div>
 </div>
+
  
 
 <div class="home_style  Channel">
@@ -50,18 +52,19 @@
   </div>
   <!--栏目-->
   <div class="Column_list navigation">
-	<a href="#" class="w_logo"><img src="/qiantai/images/logo.png"  width="100%"/></a>
+
+  <a href="#" class="w_logo"><img src="/qiantai/images/logo.png"  width="100%"/></a>
    <div class="navigatio_name">
      <a href="javascript:" class="mouse-enter"><i class="icon_navigatio"></i>导航</a>
      <div class="navigatio_nav">
-		<ul class=" clearfix">
-		   <li class="Channel_name"><a href="#" ><i class="icon_TV"></i>首页</a></li>
-		   <li class="Channel_name1"><a href="#" ><i class="icon_TV"></i>电影</a></li>
-		   <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
-		   <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
-		   <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>
-		   <li class="Channel_name5"><a href="#" ><i class="icon_TV"></i>原创视频</a></li>
-		</ul>
+     <ul class=" clearfix">
+   <li class="Channel_name"><a href="#" ><i class="icon_TV"></i>首页</a></li>
+   <li class="Channel_name1"><a href="#" ><i class="icon_TV"></i>电影</a></li>
+   <li class="Channel_name2"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
+   <li class="Channel_name3"><a href="#"><i class="icon_TV"></i>VIP专区</a></li>
+   <li class="Channel_name4"><a href="#" ><i class="icon_TV"></i>动漫专区</a></li>
+   <li class="Channel_name5"><a href="#" ><i class="icon_TV"></i>原创视频</a></li>
+  </ul>
      </div>
    </div>
    <div class="Video_search">
@@ -69,7 +72,6 @@
   </div>
  </div>
 </div>
-
  <!--热播精选-->
  <div class="Hot_selection_style Channels">
    <div class="title_name clearfix"><i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>热播精选 <span class="link_name"><a href="#">3月观影指南:炫酷大片不容错过</a>| <a href="#">致命诱惑!这些制服妹子好美</a>|</span></div>
@@ -840,5 +842,6 @@
  </div>
 </div>
 </div>
+
 <!--底部样式-->
 @endsection
