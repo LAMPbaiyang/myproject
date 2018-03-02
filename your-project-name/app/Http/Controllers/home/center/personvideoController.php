@@ -91,16 +91,15 @@ class personvideoController extends Controller
      */
     public function destroy($vid)
     {
-        // $filePath = videoup::where('vid',$vid)->select('video')->first();
-        // $r = Storage::delete($filePath);
-        // if(Storage::delete($filePath)){
-        //     $r = '删除成功！';
-        // }else{
-        //     $r = '删除失败！';
-        // }
+        $filePath = videoup::where('vid',$vid)->value('videoname');
+           //$base_path = base_path().'/public';
+          // return $base_path;
+         $r = Storage::delete("$filePath");
 
-        $res = videoup::where('vid',$vid)->delete();
+        
 
-        return $res;
+       $res = videoup::where('vid',$vid)->delete();
+
+        return 1;
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\video;
 
 class playController extends Controller
 {
@@ -16,7 +17,7 @@ class playController extends Controller
      */
     public function index()
     {
-        //
+        
         return view('homes/play');
     }
 
@@ -49,7 +50,12 @@ class playController extends Controller
      */
     public function show($id)
     {
-        //
+        $res = video::where('vid',$id)->get();
+        $re  = video::where('vid',$id)->value('fenlei');
+      
+        $er  = video::where('fenlei',$re)->get();
+       
+        return view('homes/play',compact('res','er'));
     }
 
     /**

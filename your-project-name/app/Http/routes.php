@@ -21,22 +21,28 @@
  //======================前台路由=========================================================================
  
  // 首页
-Route::get('/', function () {
-    return view('homes/index');
-});
-
+// Route::get('/', function () {
+//     return view('homes/index');
+// });
+Route::get('/', 'home\indexController@index');
 
 // 前台视频列表页
 Route::get('/list', 'home\listController@index');
 
 // 前台视频播放页(详情页)
-Route::get('/play', 'home\playController@index');
+Route::resource('homes/play', 'home\playController');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
 
 // 前台注册页
-Route::get('/register', 'home\registerController@index');
+Route::resource('homes/register', 'home\registerController');
+
+// 注册验证方法路由
+Route::resource('homes/doregister', 'home\registerController@doRegister');
+
+// 前台注册手机验证码
+Route::resource('homes/yanzhengma', 'home\registerController@yanzhengma');
 
 // 前台登录页
 Route::resource('homes/login', 'home\loginController');
@@ -117,7 +123,12 @@ Route::group(['prefix'=>'admins','namespace'=>'admin','middleware'=>'admins'],fu
 	
 	// 后台视频上传管理
 	Route::resource('videoUP','videouploadController');
-	
+
+	// 后台视频上传
+	Route::resource('upload','uploadController');
+
+	Route::resource('uploads','uploadController@up');
+	Route::resource('uploadv','uploadController@vup');
 	// 后台栏目管理
 	Route::resource('column','columnController');
 	

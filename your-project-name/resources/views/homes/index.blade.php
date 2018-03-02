@@ -34,7 +34,7 @@
           </div>
         </div></span></a>
       </div>
-    </div>
+</div>
  
 
 <div class="home_style  Channel">
@@ -81,113 +81,33 @@
    <div class="Video_list margintb clearfix">
     <div class="left_Video_list Channel_bg bg">
      <span class="Signs_img"></span>
-     <a href="#" class="Video_img_link">
-      <img src="/qiantai/video/1.jpg" />
+     <a href='{{url("homes/play/$qq7[0]->vid")}}' class="Video_img_link">
+      <img src="{{$qq7[0]->picpath}}" width="460px" height="350px" />
       <span class="xianshi"><i class="icon_bofang"></i></span>
      </a>
      <div class="heading_name">
-      <A href="#">男子保护区内持枪狩猎 竟把民警当猎物射击</A>
-      <H4>民警及时隐蔽卧倒并未受伤</H4>
+      <A href="#">{{$qq7[0]->title}}</A>
+      <H4>{{$qq7[0]->miaoshu}}</H4>
      </div>
     </div>
     <div class="right_Video_list">
      <ul class="list_v_content">
-      <li class="first_content bg">
-       <a href="{{ url('play') }}" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
+
+       @foreach($qq6 as $v)
+     <li class="first_content bg">
+       <a href='{{url("homes/play/$v->vid")}}' class="pic " target="_blank">
+        <img src="{{$v->picpath}}"  width="100%"/>
         <span class="first_bg"><i class="icon_bf"></i></span>
        </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
+       <a target="_blank" href="#" class="bq" >超清</a>
        <div class="tc">
         <p class="tit">
-        <a target="_blank" href="{{ url('play') }}" >轿车sssss公路上行驶被闪kkk电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
+        <a target="_blank" href="#" >{{$v->title}}</a></p>
+        <p class="des">{{$v->miaoshu}}</p>
        </div>
       </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/3.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >现场</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
+     @endforeach
+     
      </ul>
     </div>   
    </div>
@@ -197,103 +117,21 @@
     <i class="icon_title"><img src="/qiantai/images/icon_film.png" /></i>电影 <span class="link_name"><a href="#">欧美大片</a>| <a href="#">国产影片</a>| <a href="{{ url('list') }}">更多</a></span></div>
     <div class="clearfix mb40"> 
      <div class="var_list_fort">
-     <ul class="video_list list_v_content">
+      <ul class="video_list list_v_content">
+      @foreach($qq1 as $v)
      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
+       <a href='{{url("homes/play/$v->vid")}}' class="pic " target="_blank">
+        <img src="{{$v->picpath}}"  width="100%"/>
         <span class="first_bg"><i class="icon_bf"></i></span>
        </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
+       <a target="_blank" href="#" class="bq" >超清</a>
        <div class="tc">
         <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
+        <a target="_blank" href="#" >{{$v->title}}</a></p>
+        <p class="des">{{$v->miaoshu}}</p>
        </div>
       </li>
-     <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新4集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
+     @endforeach
      </ul>
      </div>
      <!--右-->
@@ -301,41 +139,15 @@
        <div class="label_title"><span class="name">即将上线</span></div>
        <div class="bd">
        <ul class="Launch_list">
+         @foreach($qq1 as $v)
         <li class="video_name">
         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
         <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
         </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-       <p class="set_number">集数：23集</p>
-        </span> </div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：45集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
+          @endforeach
        </ul>
        </div>
      </div>
@@ -349,102 +161,17 @@
     <div class="clearfix mb40"> 
      <div class="var_list_fort">
      <ul class="video_list list_v_content">
-     <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/16.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >2017年34期</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-     <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/17.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/18.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新4集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
+      @foreach($qq3 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">超清</p>
+        </span></div><p class="time">{{$v->miaoshu}}</p></li>
+          @endforeach
+    
+      
      </ul>
      </div>
      <!--右-->
@@ -452,41 +179,15 @@
        <div class="label_title"><span class="name">即将上线</span></div>
        <div class="bd">
        <ul class="Launch_list">
+         @foreach($qq3 as $v)
         <li class="video_name">
         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
         <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
         </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-       <p class="set_number">集数：23集</p>
-        </span> </div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：45集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
+         @endforeach
        </ul>
        </div>
      </div>
@@ -500,102 +201,18 @@
     <div class="clearfix mb40"> 
      <div class="var_list_fort">
      <ul class="video_list list_v_content">
-     <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/19.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >2017年34期</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-     <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/20.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/21.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >43集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-      <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/4.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新4集</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
+
+     @foreach($qq2 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">超清</p>
+        </span></div><p class="time">{{$v->miaoshu}}</p></li>
+          @endforeach
+   
+     
      </ul>
      </div>
      <!--右-->
@@ -603,207 +220,106 @@
        <div class="label_title"><span class="name">即将上线</span></div>
        <div class="bd">
        <ul class="Launch_list">
+        
+         @foreach($qq2 as $v)
         <li class="video_name">
         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
         <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
         </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-       <p class="set_number">集数：23集</p>
-        </span> </div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：45集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
+         @endforeach
+         
        </ul>
        </div>
      </div>
      <script>jQuery("#picMarquee-top2").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:3,interTime:50,trigger:"click"});</script>
     </div>
+
+
+
    <!--动漫-->
-    <div class="Channels margintb">
+   <div class="Channels margintb">
     <div class="title_name clearfix">
-    <i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>动漫 <span class="link_name"><a href="#">异次元</a>| <a href="#">二次元</a>| <a href="#">更多</a></span></div>
-     <div class="clearfix list_v_content">
-          <ul class="Notice_list">
-            <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
+    <i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>动漫专区 <span class="link_name"><a href="#">日本专区</a>|<a href="#">儿童专区</a>|<a href="#">更多</a></span></div>
+    <div class="clearfix mb40"> 
+     <div class="var_list_fort">
+     <ul class="video_list list_v_content">
+     
+      @foreach($qq4 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">超清</p>
+        </span></div><p class="time">{{$v->miaoshu}}</p></li>
+          @endforeach
+     
+     </ul>
+     </div>
+     <!--右-->
+     <div class="Launch_style bg" id="picMarquee-top2">
+       <div class="label_title"><span class="name">即将上线</span></div>
+       <div class="bd">
+       <ul class="Launch_list">
+       
+         @foreach($qq4 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
+        </span></div><p class="time">上线时间：2017-03-30</p></li>
+         @endforeach
+        
+       </ul>
        </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/11.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/13.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/12.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-        </ul>
-        </div>      
+     </div>
+     <script>jQuery("#picMarquee-top2").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:3,interTime:50,trigger:"click"});</script>
     </div>
     <!--原创专区-->
-    <div class="Channels margintb">
+   <div class="Channels margintb">
     <div class="title_name clearfix">
-    <i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>原创专区 <span class="link_name"><a href="#">拍客专区</a>| <a href="#">团体专区</a>| <a href="#">更多</a></span></div>
-     <div class="clearfix list_v_content">
-          <ul class="Notice_list">
-            <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
+    <i class="icon_title"><img src="/qiantai/images/icon_title_TV.png" /></i>原创专区 <span class="link_name"><a href="#">个人专区</a>|<a href="#">团队专区</a>|<a href="#">更多</a></span></div>
+    <div class="clearfix mb40"> 
+     <div class="var_list_fort">
+     <ul class="video_list list_v_content">
+    
+     @foreach($qq4 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">超清</p>
+        </span></div><p class="time">{{$v->miaoshu}}</p></li>
+          @endforeach
+    
+     </ul>
+     </div>
+     <!--右-->
+     <div class="Launch_style bg" id="picMarquee-top2">
+       <div class="label_title"><span class="name">即将上线</span></div>
+       <div class="bd">
+       <ul class="Launch_list">
+
+        @foreach($qq4 as $v)
+        <li class="video_name">
+        <div class="clearfix">
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
+        <span class="Introduction">
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
+        </span></div><p class="time">上线时间：2017-03-30</p></li>
+         @endforeach
+        
+       </ul>
        </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/14.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/11.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/13.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-       <li class="first_content bg">
-       <a href="#" class="pic " target="_blank">
-        <img src="/qiantai/video/12.jpg"  width="100%"/>
-        <span class="first_bg"><i class="icon_bf"></i></span>
-       </a>
-       <a target="_blank" href="#" class="bq" >更新预告</a>
-       <div class="tc">
-        <p class="tit">
-        <a target="_blank" href="#" >轿车公路上行驶被闪电劈中</a></p>
-        <p class="des">巨响过后冒出浓烟</p>
-       </div>
-      </li>
-        </ul>
-        </div>      
+     </div>
+     <script>jQuery("#picMarquee-top2").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:3,interTime:50,trigger:"click"});</script>
     </div>
     <!---->
     <div class="l_f width50">

@@ -53,7 +53,7 @@
       <div class="nav pull-right">
           @if(session('name') == null)
                   <button  class='btn' type='button'><a href='{{ url('homes/login') }}'class='Channel_name'>登录</a></button>
-                  <button  class='btn' type='button'><a href='{{ url('#') }}'class='Channel_name'>注册</a></button>
+                  <button  class='btn' type='button'><a href='{{ url('homes/register') }}'class='Channel_name'>注册</a></button>
           @else
                   <button  class='btn' type='button'><a href='{{ url('homes/center') }}'class='Channel_name'>{{session('name')}}</a></button>
                   <button  class='btn' type='button'><a href='{{ url('homes/center') }}'class='Channel_name'>个人中心</a></button>

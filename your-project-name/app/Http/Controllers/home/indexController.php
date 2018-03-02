@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\video;
 
 class indexController extends Controller
 {
@@ -16,7 +17,15 @@ class indexController extends Controller
      */
     public function index()
     {
-       return view('homes/index');
+        // $qq = video::get();
+        $qq1 = video::where('fenlei',1)->get();
+        $qq2 = video::where('fenlei',2)->get();
+        $qq3 = video::where('fenlei',3)->get();
+        $qq4 = video::where('fenlei',4)->get();
+        $qq6 = video::where('fenlei',6)->get();
+        $qq7 = video::where('fenlei',7)->get();
+        // dd($qq);
+       return view('homes/index',compact('qq1','qq2','qq3','qq4','qq6','qq7'));
     }
 
     /**

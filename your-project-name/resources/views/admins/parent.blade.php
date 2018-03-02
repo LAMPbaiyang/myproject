@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+   <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Amaze UI Admin index Examples</title>
     <meta name="description" content="这是一个 index 页面">
@@ -228,6 +229,12 @@
                 <li class="sidebar-nav-link">
                     <a href="{{url('admins/videoUP')}}">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传管理
+
+                    </a>
+                </li>
+                 <li class="sidebar-nav-link">
+                    <a href="{{url('admins/upload')}}">
+                        <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传视频
 
                     </a>
                 </li>

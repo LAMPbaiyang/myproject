@@ -2,35 +2,47 @@
 @section('视频网站')
 @section('content')
 <!--视频播放-->
-
-
+<!-- 七牛播放器 -->
+<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
+<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
+<!-- 七牛播放器 -->
 <div class="Video_playback_style">
 <div class="page_style clearfix">
  <!--面包屑-->
  <div class="Location_link">
-  <em></em><a href="index.html">首页</a>  &lt;   <a href="list_page.html">电视剧</a> &lt; <span>大秦帝国之崛起</span> 
+  <em></em><a href="{{url('/')}}">首页</a>  &lt;   <a href="list_page.html">电视剧</a> &lt; <span>大秦帝国之崛起</span> 
  </div>
  <!---->
  <div class="Video_playback">
   
 
-  <div class="playback_title">如果我爱你未删减版 第1集 <span class="label_name"><a href="#">都市言情</a></span><span class="label_name"><a href="#">情感生活</a></span><span class="label_name"><a href="#">偶像</a></span></div>
-  <div class="page_style clearfix" id="video"></div>
-  <!-- <div id="video" style="width:600px;height:400px;"></div> -->
-    <script type="text/javascript">
-      var videoObject = {
-        container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
-        variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
-        flashplayer:false,//如果强制使用flashplayer则设置成true
-        video:'1.mp4'//视频地址
-      };
-      var player=new ckplayer(videoObject);
-    </script>
+  <div class="playback_title">{{$res[0]->title}}<span class="label_name"><a href="#">电影</a></span><span class="label_name"><a href="#">阿汤哥</a></span><span class="label_name"><a href="#">偶像</a></span></div>
+ 
+ 
+<!-- jsModern播放插件 创建视频容器，设置明确宽高，不含任何内容 
+ <div class="page_style clearfix col-md-8" id="video" style="width:800px;height:450px;margin-left:2px;">
+	<video src="/qiantai/uploads/demo.mp4"></video>
+ </div>  
+ -->
+ 
+ 
+<div class="page_style clearfix col-md-8" id="video" style="width:800px;height:450px;margin-left:2px;">
+	<!-- <video id="example_video" class="video-js vjs-default-skin" controls preload="none" width="800" height="450" poster="/qiantai/uploads/oceans-clip.png" data-setup="{}">
+		<source src="http://os4vho7yf.bkt.clouddn.com/shipin/15199164939846.mp4" type='video/mp4' />
+		<source src="/qiantai/uploads/oceans-clip.webm" type='video/webm' />
+		<source src="/qiantai/uploads/oceans-clip.ogv" type='video/ogg' />
+		<track kind="captions" src="/qiantai/uploads/demo.captions.vtt" srclang="en" label="English"></track> --><!-- Tracks need an ending tag thanks to IE9
+		<track kind="subtitles" src="/qiantai/uploads/demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+	<!-- </video>  -->
+  
+<!-- 七牛播放器 -->
+  <h1>腾龙TV</h1>
+    <video id="demo-video" class="video-js vjs-big-play-centered"></video>
 
+<!-- 七牛播放器 -->
+</div>
 
-
-
-  <div id="playerlist_style"> 
+  <div id="playerlist_style" class="col-md-3"> 
     
   <div id="a2" class="listcontrol-btn close_btn" title="收起列表"><i class="site-icons-play icon-listcontrol-right"></i></div>
  
@@ -41,6 +53,7 @@
     <div class="hd"><ul><li>选集<i class="jt"></i></li><li>介绍<i class="jt"></i></li></ul></div>
     <div class="bd" id="videomenu_style">
      <ul class="Episodes_list clearfix">
+
       <li id="vli_0" onclick="playvideo(0)" class="volume selected"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">1</a></li>
       <li id="vli_1" onclick="playvideo(1)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">2</a></li>
       <li id="vli_2" onclick="playvideo(2)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">3</a></li>
@@ -52,8 +65,8 @@
      </ul>
      <ul>
       <li class="clearfix marginq">
-      <div class="l_f information_img"><img src="/qiantai/video/d9.jpg"></div>
-      <div class="r_f play_information_b ">
+      <div class="l_f information_img col-md-8"><img src="/qiantai/video/d9.jpg"></div>
+      <div class="r_f play_information_b col-md-4">
        <dl>
         <dt>如果我爱你未删减版</dt>
         <dd class="mt10 clearfix"><label>地区：</label><span class="l_f"><a href="#">内地</a></span></dd>
@@ -76,14 +89,36 @@
 
  </div>
 </div>
-</div>
-
-
 <!---->
 <div class="play_video_b">
+
  <div class="page_style">
  <div class="l_f  frequency" id="play_vod_hits"><em class="icon_tup"></em><i>9,020</i>次播放</div>
  <div class="l_f  frequency" id="play_vod_hits"><em class="icon_tup"></em><a href="#">收藏</a></div>
+ 
+ <!-- 为分享按钮设置一个空的容器 -->
+        <div id="share-box"></div>
+        <script>
+            /* 传入按钮容器，再设置相应按钮为 false 即可移除指定的按钮 */
+            /* 五个按钮分别是: qrcode, douban, qzone, sina, qq */
+            /* 想移除哪一个按钮，只需将其设置为 false 即可 */
+            jsModern.share("#share-box", {
+                qzone: false,
+                qq: false
+            });	
+        </script>
+ <!-- 分享功能尚未实现!!!!! -->
+		
+
+		<script>
+			jsModern.share({
+			    qrcode: "#share-qrcode",
+			    douban: "#share-douban",
+			    qzone: "#share-qzone",
+			    sina: "#share-sina",
+			    qq: "#share-qq"
+			});  
+		</script>
  
  </div>
 </div>
@@ -148,7 +183,8 @@
 
                                 </div>
 
-                            </div>
+    </div>
+
 
     <!--滚动 开始-->
     <div class="col-md-3 column" style="margin-top: 10px;">
@@ -156,41 +192,16 @@
        <div class="label_title"><span class="name">即将上线</span></div>
        <div class="bd">
        <ul class="Launch_list">
+
+        @foreach($er as $v)
         <li class="video_name">
         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
+        <a href='{{url("homes/play/$v->vid")}}' class="link_name"><img src="{{$v->picpath}}"/></a>
         <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
+        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">{{$v->title}}</a>
+        <p class="set_number">标清</p>
         </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-       <p class="set_number">集数：23集</p>
-        </span> </div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：45集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
-         <li class="video_name">
-         <div class="clearfix">
-        <a href="#" class="link_name"><img src="/qiantai/video/5.jpg"/></a>
-        <span class="Introduction">
-        <a href="#" title="愿有人陪你颠沛流离" class="p_title_name">愿有人陪你颠沛流离</a>
-        <p class="set_number">集数：23集</p>
-        </span></div><p class="time">上线时间：2017-03-30</p></li>
+         @endforeach
        </ul>
        </div>
      </div>
@@ -210,15 +221,17 @@
 
                                 </div>
                             </div>
+
                         </div>
  <!--评论框结束--> 
 <center>
 <div class="link_name">
 <a href="#">关于我们</a>|<a href="#">媒体合作</a>|<a href="#">开放平台</a>|<a href="#">广告服务</a>|<a href="#">联系我们</a>|<a href="#">工作机会</a>|<a href="#">友情链接</a></div>
 <div class="Copyright">Copyright © 2004-2017 视频名称（xx.com）All rights reserved.</div>
-</div>
 </center>
 </div>
+
+
 <!-- 代码 开始 -->
 <div class="go-top dn" id="go-top">
     
@@ -227,62 +240,19 @@
 </div>
 </body>
 </html> 
-<script type="text/javascript" src="/qiantai/js/ckplayer/ckplayer.js" charset="utf-8"></script>
- <script>
- $(".bd").niceScroll({  
-  cursorcolor:"#888888",  
-  cursoropacitymax:1,  
-  touchbehavior:false,  
-  cursorwidth:"5px",  
-  cursorborder:"0",  
-  cursorborderradius:"5px"  
-});
-    function playerstop() {
-            setTimeend();
-        }
-        function setTimeend() {//获取下一部视频的播放ID
-            nowD++;
-            if (nowD >= videoarr.length ) {
-                nowD = 0;
-            }
-            playvideo(nowD);
-        }
-        var nowD = 0;//目前播放的视频的编号(在数组里的编号)
-        var frontTime = false;//前置广告倒计时是否在运行中
-        var frontHtime = false;//后置广告是否在进行中
-        var videoarr = new Array();//新建一个数组来存flash端视频地址，添加方法就像下面一样
-        videoarr.push('http://player.video.qiyi.com/2e97d0a59f6278c62046517b4f2f6728/0/2715/v_19rraev46g.swf-albumId=205153601-tvId=637184900-isPurchase=0-cnId=2');
-        videoarr.push('http://movie.ks.js.cn/flv/2012/02/6-1.flv');
-        videoarr.push('http://movie.ks.js.cn/flv/2011/11/8-1.flv');
-        videoarr.push('http://movie.ks.js.cn/flv/2014/04/24-2.flv');
-        var html5arr = new Array();//新建一个数组来保存HTML5端用到的视频地址，注意，因为本演示只有一种mp4文件，所以html5下所有用到的视频地址都是相同的，请见谅，另外，该数组是一个二维数组
-        html5arr.push(['http://player.video.qiyi.com/2e97d0a59f6278c62046517b4f2f6728/0/2715/v_19rraev46g.swf-albumId=205153601-tvId=637184900-isPurchase=0-cnId=2']);
-        html5arr.push(['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4']);
-        html5arr.push(['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4']);
-        html5arr.push(['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4']);
-        function playvideo(n) {
-            nowD = n;
-            var flashvars = {
-                f: videoarr[n],
-                c: 0,
-                p: 1,
-                e: 0,
-                my_url: encodeURIComponent(window.location.href)
-            };
-           // for (i = 0; i < videoarr.length; i++) {//这里是用来改变右边列表背景色
-//                if (i != nowD) {
-//                    CKobject._K_('vli_' + i).style.backgroundColor ='#262626';
-//                }
-//                else {
-//                    CKobject._K_('vli_' + i).style.backgroundColor ='#DAF2FF';
-//                }
-//            }
 
-            var video = ['http://player.video.qiyi.com/2e97d0a59f6278c62046517b4f2f6728/0/2715/v_19rraev46g.swf-albumId=205153601-tvId=637184900-isPurchase=0-cnId=2'];
-            CKobject.embed('/qiantai/js/ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', false, flashvars, html5arr[n]);
-        } 
-        playvideo(0);
- </script>
+<!--jsMorden播放插件  暂时不用 
+<link rel="stylesheet" href="/qiantai/videoplay/jsmodern.min.css">
+<script src="/qiantai/videoplay/jquery.min.js"></script>
+<script src="/qiantai/videoplay/jsmodern.min.js"></script>
+<script>
+	$(function () {
+		jsModern.video("#video");
+	})
+</script>
+-->
+
+<!-- 未知js特效 -->
 <script type="text/javascript">
  
 $(function() { 
@@ -298,10 +268,24 @@ $(function() {
 <!--聊天js-->
  <!-- 全局js -->
  
-    <script src="/qiantai/js//jquery-2.1.1.min.js"></script>
+    <script src="/qiantai/js/jquery-2.1.1.min.js"></script>
     <script src="/qiantai/js/bootstrap.min.js"></script>
 
     <!-- 自定义js -->
     <script src="/qiantai/js/content.min.js?v=1.0.0"></script>
+  
+   <!-- 七牛播放器 -->
+    <script type="text/javascript">
+      var options = {
+    controls: true,
+    url: '{{$res[0]->videopath}}',
+    type: 'hls',
+    preload: true,
+    autoplay: false // 如为 true，则视频将会自动播放
+};
+var player = new QiniuPlayer('demo-video', options);
+
+    </script>
+    <!-- 七牛播放器 -->
 
 @endsection

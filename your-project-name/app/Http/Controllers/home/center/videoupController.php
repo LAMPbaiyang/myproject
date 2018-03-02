@@ -42,6 +42,7 @@ class videoupController extends Controller
     public function store(Request $request)
     {
         
+        
          if($request->hasFile('video')){
             // 判断文件是否有效
             if ($request->file('video')->isValid()) {
@@ -69,7 +70,8 @@ class videoupController extends Controller
                     $content = $request->input('desc');
                     $time = time();
                     $video = $paths.'/'.$fileNames;
-                    DB::insert('insert into videoup (username, title, times, content, video) values (?, ?, ?, ?, ?)', [$username,$tit, $time, $content, $video]);
+                    $videoname = $fileNames;
+                    DB::insert('insert into videoup (username, title, times, content, video,videoname) values (?, ?, ?, ?, ?, ?)', [$username,$tit, $time, $content, $video, $videoname]);
                     return redirect('homes/center')->with('exts', '上传成功');
                 }
             }

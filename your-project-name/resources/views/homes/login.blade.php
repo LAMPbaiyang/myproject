@@ -40,6 +40,8 @@
                                     <img src="{{url('homes/codes')}}">
                                     </center>
                                 </div>
+                               
+                                
                             <div class="mb2"><button type="submit"  class="act-but submit"  style="color: #FFFFFF">登录</button></div>
                         </form>
                     </div>

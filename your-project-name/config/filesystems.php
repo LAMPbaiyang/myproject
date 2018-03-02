@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root'   => storage_path('app'),
+            'root'   => public_path('/qiantai/uploads/video'),
         ],
 
         'ftp' => [
@@ -57,7 +57,7 @@ return [
             // Optional FTP Settings...
             // 'port'     => 21,
             // 'root'     => '',
-            // 'passive'  => true,
+            // 'passive' => true,
             // 'ssl'      => true,
             // 'timeout'  => 30,
         ],
@@ -78,6 +78,20 @@ return [
             'endpoint'  => 'https://identity.api.rackspacecloud.com/v2.0/',
             'region'    => 'IAD',
             'url_type'  => 'publicURL',
+        ],
+
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'os4vho7yf.bkt.clouddn.com', //你的七牛域名
+                'https'     => 'dn-yourdomain.qbox.me',         //你的HTTPS域名
+                'custom'    => 'static.abc.com',                //Useless 没啥用，请直接使用上面的 default 项
+             ],
+            'access_key'=> 'Ifoco16AKdjrj1QJt-5ABT-RIrSfhEE_-_H8yus8',  //AccessKey
+            'secret_key'=> 'GSQIPcQdwo7Pq77j8MukovtW6DtgOGccsMuiG0t7',  //SecretKey
+            'bucket'    => 'jenyl',  //Bucket名字
+            'notify_url'=> '',  //持久化处理回调地址
+            'access'    => 'public'  //空间访问控制 public 或 private
         ],
 
     ],

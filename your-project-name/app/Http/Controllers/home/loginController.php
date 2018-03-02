@@ -12,6 +12,8 @@ use App\Http\Model\user;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
 
+
+
 class loginController extends Controller
 {
     /**
@@ -53,7 +55,7 @@ class loginController extends Controller
         }
         return redirect('/')->with('msg','登录成功');
     }
-
+ 
     /**
      * Display the specified resource.
      *
@@ -107,4 +109,6 @@ class loginController extends Controller
         header('Content-type: image/jpeg');
         $builder->output();
     }
+
+
 }
