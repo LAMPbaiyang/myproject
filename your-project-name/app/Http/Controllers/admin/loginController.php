@@ -66,7 +66,7 @@ class loginController extends Controller
 		
 		
 		// if(session('upass') !== $res['upass']){
-			// return back()->with('msg','密码输入错误');
+		// 	return back()->with('msg','密码输入错误');
 		// }
 		
 		
@@ -122,5 +122,7 @@ class loginController extends Controller
     {
         //
     }
+    
+   
 
 }

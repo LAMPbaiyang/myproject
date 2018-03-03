@@ -3,7 +3,7 @@
 @section('content')
  
 <!-- 内容区域 -->
- <script src='/qiantai/up/js/main.js'></script>
+<script src='/qiantai/up/js/main.js'></script>
 <script src='/qiantai/up/js/red.js'></script>
 <meta charset='UTF-8'>
 <meta name="robots" content="noindex">

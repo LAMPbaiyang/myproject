@@ -9,8 +9,9 @@ class column extends Model
    public $table = 'column';
 	
 	public $timestamps = false;
+
 	
-	// protected $fillable = ['uid','tel','uname'];
+    protected $fillable = ['cid','cname','vid'];
 	
 	// public function user_info()
    // {

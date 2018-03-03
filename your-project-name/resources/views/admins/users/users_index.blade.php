@@ -78,7 +78,14 @@
                                         <!-- more data -->
                                     </tbody>
                                 </table>
-                               
+                               <div class="">
+                                 <ul class="">
+                                    @foreach($users as $v )
+                                        <li>{{ $v->name }}</li>
+                                    @endforeach
+                                </ul>
+                               </div>
+                               {!! $users->render() !!}
                             </div>
                         </div>
                     </div>

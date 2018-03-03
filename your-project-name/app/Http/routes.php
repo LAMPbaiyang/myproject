@@ -36,7 +36,7 @@
  //======================前台路由=========================================================================
  
  // 首页
- Route::get('/', 'home\indexsController@index');
+ Route::get('/', 'home\indexController@index');
 
 // 前台视频列表页
 Route::get('/list', 'home\listController@index');
@@ -47,15 +47,23 @@ Route::get('/play', 'home\playController@index');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
-
+//----------------------
 // 前台注册页
-Route::get('/register', 'home\registerController@index');
+Route::resource('homes/register', 'home\registerController@index');
+
+Route::resource('homes/doregister', 'home\registerController@doRegister');
+
+Route::resource('homes/yanzhengma', 'home\registerController@yanzhengma');
 
 // 前台登录页
 Route::resource('homes/login', 'home\loginController');
 
 //前台登录验证码
 Route::get('homes/codes','home\loginController@codes');
+
+// 前台手机注册
+ 
+// Route::post('homes/','home\loginController@sms');
 
 // 前台个人中心页
 Route::group(['prefix'=>'homes','namespace'=>'home\center','middleware'=>'homes'],function(){
@@ -133,8 +141,16 @@ Route::group(['prefix'=>'admins','namespace'=>'admin','middleware'=>'admins'],fu
 	
 	// 后台栏目管理
 	Route::resource('column','columnController');
+
+	Route::post('column/cdr','columnController@cdr');
+
+	Route::post('column/columnadd','columnController@columnadd');
 	
 	// 广告轮播图管理
 	Route::resource('ads','adsController');
+	
+	Route::resource('ads/imageUpload','adsController@imgupload');
+	
+	Route::resource('ads/create','adsController@create');
 
 });

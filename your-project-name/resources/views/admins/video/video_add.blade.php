@@ -42,21 +42,16 @@
                                      <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">视频图片<span class="tpl-form-line-small-title">vpic</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="uname" id="user-name" placeholder="请添加图片">    
+                                            <input type="text" class="tpl-form-input" name="year" id="user-name" placeholder="请添加图片">    
                                         </div>
                                     </div>
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">视频分类<span class="tpl-form-line-small-title">vsummary</span></label>
                                         <div class="am-u-sm-9">
-                                             <input type="text" class="tpl-form-input" name="uname" id="user-name" placeholder="请添加分类">       
+                                             <input type="text" class="tpl-form-input" name="actor" id="user-name" placeholder="请添加分类">       
                                         </div>
                                     </div>
-                                    <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-3 am-form-label">喜欢 <span class="tpl-form-line-small-title">like</span></label>
-                                        <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="status" id="user-status"  placeholder="喜欢请输入1,不喜欢请输入0">    
-                                        </div>
-                                    </div>
+                                    
                                     
                                  <!--    <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">用户密码 <span class="tpl-form-line-small-title">upass</span></label>

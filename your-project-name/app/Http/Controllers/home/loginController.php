@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Model\user;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
+use Flc\Dysms\Client;
+use Flc\Dysms\Request\SendSms;
 
 class loginController extends Controller
 {
@@ -106,5 +108,23 @@ class loginController extends Controller
         session(['codes'=>$builder->getPhrase()]);
         header('Content-type: image/jpeg');
         $builder->output();
+    }
+
+     public function sms(Request $request)
+    {   
+        $tel = $request->input('tel');
+        $config = [
+            'accessKeyId'    => 'LTAIykDgWIZW36Tu',
+            'accessKeySecret' => 'LTX21ZP5w9cfrxsZttUgsB9pq0amZo',
+        ];
+        $client  = new Client($config);
+        $sendSms = new SendSms;
+        $sendSms->setPhoneNumbers('15028505196');
+        $sendSms->setSignName('杨晓冉');
+        $sendSms->setTemplateCode('SMS_123668656');
+        $sendSms->setTemplateParam(['code' => rand(100000, 999999)]);
+        //$sendSms->setOutId('demo');
+        
+        print_r($client->execute($sendSms));
     }
 }

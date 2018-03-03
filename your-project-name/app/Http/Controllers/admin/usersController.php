@@ -17,7 +17,7 @@ class usersController extends Controller
      */
     public function index()
     {	
-		$users = users::all();
+		$users = users::paginate(3);
 
         return view('admins/users/users_index',compact('users'));
     }
@@ -43,7 +43,7 @@ class usersController extends Controller
         // $res = $request->input();
         
         $res = $request->except('_token');
-        
+
         $res = users::insert($res);
 
          // dd($res);
@@ -52,6 +52,8 @@ class usersController extends Controller
         }else{
             return redirect('/admins/create')->with('msg','添加内容失败');
         }
+        
+        
     }
 
     /**

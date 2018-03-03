@@ -10,6 +10,7 @@
 </div>
 
 
+<!--首页轮播大图-->
 <div class="col-md-12 column" style="margin-top:35px;">
       <div class="carousel slide" id="carousel-658587">
         <ol class="carousel-indicators">
@@ -20,21 +21,15 @@
           <li data-slide-to="2" data-target="#carousel-658587">
           </li>
         </ol>
-        <div class="carousel-inner" style="box-shadow:0 0 5px 1px gray; border-radius:5px;" class="carousel-inner" role="listbox">
-          <div class="item active"  >
-            <img alt="" src="/qiantai/images/banner2.jpg" />
-           
-          </div>
+        <div class="carousel-inner" id="lunbo" style="box-shadow:0 0 5px 1px gray; border-radius:5px;" class="carousel-inner" role="listbox">
+   <!--  @foreach($advertisement as $v) -->
           <div class="item">
-            <img alt="" src="/qiantai/images/banaer.png" />
-           
+            <img alt="" src="{{ $v->picpath }}" />
           </div>
-          <div class="item">
-            <img alt="" src="/qiantai/images/banner2.jpg" />
-          </div>
-        </div></span></a>
+    <!-- @endforeach -->
+        </div>
       </div>
-    </div>
+</div>
  
 
 <div class="home_style  Channel">
@@ -846,6 +841,8 @@
  </div>
 </div>
 </div>
-
+<script>
+  $("#lunbo").children("div:first").addClass('active');
+</script>
 <!--底部样式-->
 @endsection

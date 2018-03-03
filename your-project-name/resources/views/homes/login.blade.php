@@ -40,6 +40,10 @@
                                     <img src="{{url('homes/codes')}}">
                                     </center>
                                 </div>
+
+
+
+
                             <div class="mb2"><button type="submit"  class="act-but submit"  style="color: #FFFFFF">登录</button></div>
                         </form>
                     </div>
@@ -50,8 +54,26 @@
         <script src="/qiantai/login/js/EasePack.min.js"></script>
         <script src="/qiantai/login/js/rAF.js"></script>
         <script src="/qiantai/login/js/demo-1.js"></script>
+        <script src="/qiantai/js/jquery-1.8.3.min.js"></script>
         <div style="text-align:center;">
 </div>
+    <!-- ajax引用获取验证码-->
+    <script type="text/javascript">
+                function sendMobileCode()
+                {
+                    // alert(1111);
+                    
+                    $.post(
+                    '{{ url("login/sms") }}',
+                    {'_token':'{{ csrf_token() }}'},
+                    function(data){
+                        alert(data);
+                    });
+                }
+    </script>
+
+
+
     </body>
             @if (session('msg'))
             <script>
