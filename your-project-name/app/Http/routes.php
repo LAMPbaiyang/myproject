@@ -30,7 +30,9 @@ Route::get('/', 'home\indexController@index');
 Route::get('/list', 'home\listController@index');
 
 // 前台视频播放页(详情页)
-Route::resource('homes/play', 'home\playController');
+Route::resource('homes/play', 'home\playController@show');
+
+Route::resource('homes/comment', 'home\playController@comment');
 
 //搜索列表页
 Route::get('/search','home\searchController@index');
@@ -67,8 +69,6 @@ Route::resource('videoup', 'videoupController');
 //视频管理
 Route::resource('personvideo', 'personvideoController');
 
-//用户评论
-Route::resource('comment', 'commentController');
 
 //历史记录
 Route::resource('history', 'historyController');

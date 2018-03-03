@@ -129,57 +129,19 @@
     <div class="col-md-9 ">
                                 <div class="chat-discussion">
 
+                                   @foreach($com as $v)
                                     <div class="chat-message">
-                                        <img class="message-avatar" src="/qiantai/images/a1.jpg" alt="">
+                                        <img class="message-avatar" src="{{ $v['uface'.$v->id] }}" alt="">
                                         <div class="message">
-                                            <a class="message-author" href="#"> 颜文字君</a>
+                                            <a class="message-author" href="#"> {{$v->name}}</a>
                                             <span class="message-date"> 2015-02-02 18:39:23 </span>
                                             <span class="message-content">
-                      H+ 是个好框架
+                                            {{$v->comment}}
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="chat-message">
-                                        <img class="message-avatar" src="/qiantai/images/a4.jpg" alt="">
-                                        <div class="message">
-                                            <a class="message-author" href="#"> 林依晨Ariel </a>
-                                            <span class="message-date">  2015-02-02 11:12:36 </span>
-                                            <span class="message-content">
-                      jQuery表单验证插件 - 让表单验证变得更容易
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message">
-                                        <img class="message-avatar" src="/qiantai/images/a2.jpg" alt="">
-                                        <div class="message">
-                                            <a class="message-author" href="#"> 谨斯里 </a>
-                                            <span class="message-date">  2015-02-02 11:12:36 </span>
-                                            <span class="message-content">
-                      验证日期格式(类似30/30/2008的格式,不验证日期准确性只验证格式
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message">
-                                        <img class="message-avatar" src="/qiantai/images/a5.jpg" alt="">
-                                        <div class="message">
-                                            <a class="message-author" href="#"> 林依晨Ariel </a>
-                                            <span class="message-date">  2015-02-02 - 11:12:36 </span>
-                                            <span class="message-content">
-                      还有约79842492229个Bug需要修复
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message">
-                                        <img class="message-avatar" src="/qiantai/images/a6.jpg" alt="">
-                                        <div class="message">
-                                            <a class="message-author" href="#"> 林依晨Ariel </a>
-                                            <span class="message-date">  2015-02-02 11:12:36 </span>
-                                            <span class="message-content">
-                      九部令人拍案叫绝的惊悚悬疑剧情佳作】如果你喜欢《迷雾》《致命ID》《电锯惊魂》《孤儿》《恐怖游轮》这些好片，那么接下来推荐的9部同类题材并同样出色的的电影，绝对不可错过哦~
-                                                        
-                                            </span>
-                                        </div>
-                                    </div>
+                                   @endforeach
+                                   
 
                                 </div>
 
@@ -211,18 +173,37 @@
  <!--滚动 结束-->
  <!--评论框开始-->
   <div class="row">
+     @if(session('name') == null)
+            <br><br><br>
+            <center>
+              <h2>
+                <a href="">请登录后评论</a>
+              </h2>
+            </center>
+            <br><br><br>
+          @else
+                 <form action="{{url('homes/comment/'.$er[0]->fenlei)}}" method='post'>
+                          {{ csrf_field() }}
+                          <input type="hidden" name="_method" value="put">
+
                             <div class="col-sm-9">
                                 <div class="chat-message-form">
-
-                                    <div class="form-group">
-
+                                      <div class="form-group">
                                         <textarea class="form-control message-input" name="message" placeholder="输入消息内容，按回车键发送"></textarea>
-                                    </div>
-
+                                      </div>
                                 </div>
                             </div>
+                            <div class="col-sm-">
+                                <div class="form-group">
+                                  <br><br><br>
+                                  <button  class='btn' type='submit'>提交回复</button> 
+                                </div>
+                             </div>
+                  </form>
+          @endif    
+                        
 
-                        </div>
+  </div>
  <!--评论框结束--> 
 <center>
 <div class="link_name">
@@ -287,5 +268,11 @@ var player = new QiniuPlayer('demo-video', options);
 
     </script>
     <!-- 七牛播放器 -->
+
+    @if(!empty(session('msg')))
+                        <script>
+                            alert("{{session('msg')}}");
+                        </script>
+                    @endif       
 
 @endsection
