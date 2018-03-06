@@ -13,14 +13,13 @@
 						
                         <div class="widget am-cf">
 							 <div class="widget-head am-cf">
-								<div class="widget-title  am-cf">用户管理表</div>
+								<div class="widget-title  am-cf">后台用户管理</div>
 							</div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">
 									 <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> <a href="{{url('admins/users/create')}}">新增</a></button>
-                                                
+                                            <div class="am-btn-group am-btn-group-xs">                                              
+                                                <a href="{{url('admins/users/create')}}"><button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button></a>
                                             </div>
                                         </div>
 								
@@ -37,7 +36,7 @@
                                             <th>用户手机号</th>
                                             <th>用户昵称</th>
 											<th>用户权限</th>
-                                            <th>用户状态</th>
+                                            <th>用户密码</th>
                                             <th>操作</th>
                                         </tr>
                                     </thead>
@@ -48,18 +47,14 @@
                                             <td>{{$v->uname}}</td>
 											<td>
                                                 @if ($v->auth== 2)
-													VIP用户
+													超级管理员
 												@elseif($v->auth== 1)
-													普通用户
+													普通管理员
 												@endif
                                               
                                             </td>
                                             <td>
-												@if ($v->status==0)
-													禁用
-												@elseif($v->status==1)
-													启用
-												@endif
+											{{$v->upass}}
 											
 											</td>
                                             <td>
@@ -78,7 +73,15 @@
                                         <!-- more data -->
                                     </tbody>
                                 </table>
-                               
+                               <!-- bootstrap分页-->
+							   <div class="container">
+									@foreach ($users as $v)
+										{{ $v->name }}
+									@endforeach
+								</div>
+
+								{!! $users->render() !!}
+							   
                             </div>
                         </div>
                     </div>
@@ -94,6 +97,9 @@
     <script src="/houtai/js/amazeui.datatables.min.js"></script>
     <script src="/houtai/js/dataTables.responsive.min.js"></script>
     <script src="/houtai/js/app.js"></script>
+	
+	
+	 
 
 	@if (session('msg'))
             <script>
@@ -120,15 +126,12 @@
                 }    
             );
         }
-		//js实现点击删除tr行,尚未成功
-		// document.getElementById("del").onclick=function(){
-		// this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode);
-		// }
+		
 		
     </script>
 
-
-
+</body>
+</html>
 
 
     

@@ -136,4 +136,11 @@ class centerController extends Controller
         }
     }
     }
+
+
+    public function exit(Request $request)
+    {
+        session()->flush();
+        return redirect('/')->with('msg','注销成功');
+    }
 }

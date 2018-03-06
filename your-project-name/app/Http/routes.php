@@ -26,8 +26,11 @@
 // });
 Route::get('/', 'home\indexController@index');
 
+
+
 // 前台视频列表页
-Route::get('/list', 'home\listController@index');
+Route::resource('list', 'home\listController@index');
+Route::resource('detail', 'home\listController@show');
 
 // 前台视频播放页(详情页)
 Route::resource('homes/play', 'home\playController@show');
@@ -35,7 +38,7 @@ Route::resource('homes/play', 'home\playController@show');
 Route::resource('homes/comment', 'home\playController@comment');
 
 //搜索列表页
-Route::get('/search','home\searchController@index');
+Route::resource('homes/search','home\searchController');
 
 // 前台注册页
 Route::resource('homes/register', 'home\registerController');
@@ -50,13 +53,17 @@ Route::resource('homes/yanzhengma', 'home\registerController@yanzhengma');
 Route::resource('homes/login', 'home\loginController');
 
 //前台登录验证码
-Route::get('homes/codes','home\loginController@codes');
+// Route::get('homes/codes','home\loginController@codes');
+Route::get('homes/codes/1/{tmp}', 'home\loginController@codes');
 
 // 前台个人中心页
 Route::group(['prefix'=>'homes','namespace'=>'home\center','middleware'=>'homes'],function(){
 
 //用户个人中心
 Route::resource('center', 'centerController');
+
+//用户注销
+Route::resource('exit', 'centerController@exit');
 
 Route::resource('uface', 'centerController@uface');
 
@@ -65,6 +72,8 @@ Route::resource('huiyuan', 'huiyuanController');
 
 //用户上传
 Route::resource('videoup', 'videoupController');
+
+Route::resource('pinglun', 'commentController');
 
 //视频管理
 Route::resource('personvideo', 'personvideoController');
@@ -95,8 +104,8 @@ Route::resource('history', 'historyController');
 Route::resource('admins/login','admin\loginController');
 
 //后台登录验证码
-Route::get('admins/code','admin\loginController@code');
-
+// Route::get('admins/code','admin\loginController@code');
+Route::get('admins/code/2/{tmp}', 'admin\loginController@code');
 
 //后台注册
 Route::get('admins/register','admin\registerController@register');
@@ -117,6 +126,11 @@ Route::group(['prefix'=>'admins','namespace'=>'admin','middleware'=>'admins'],fu
 	
 	// 用户管理
 	Route::resource('users','usersController');
+
+	//前台用户管理
+	Route::resource('user','userController');
+	Route::resource('jin','userController@hehe');
+
 	
 	// 后台视频管理
 	Route::resource('video','videoController');
@@ -131,8 +145,18 @@ Route::group(['prefix'=>'admins','namespace'=>'admin','middleware'=>'admins'],fu
 	Route::resource('uploadv','uploadController@vup');
 	// 后台栏目管理
 	Route::resource('column','columnController');
+
+
+	
+
+	
 	
 	// 广告轮播图管理
+
+	// 轮播图管理
 	Route::resource('ads','adsController');
+	
+	//轮播图上传
+	Route::resource('ads/imageUpload','adsController@imgupload');
 
 });

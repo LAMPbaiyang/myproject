@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\video;
 
 class searchController extends Controller
 {
@@ -16,7 +17,7 @@ class searchController extends Controller
      */
     public function index()
     {
-        return view('homes/search');
+        // return view('homes/search');
     }
 
     /**
@@ -37,7 +38,20 @@ class searchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+          $comment = $request['search'];
+          if ( !empty($comment) ) {
+          $ri  = video::where('title','like',"%$comment%")->get();
+            $ir  = video::where('fenlei',3)->get();
+            return view('homes/search',compact('ri','ir'));
+          }else{
+            return redirect('/')->with('msg','搜索不能为空'); 
+
+          }
+
+
+          
+
     }
 
     /**

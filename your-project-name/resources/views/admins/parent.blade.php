@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-   <meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
+    <title>腾龙TV后台</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,114 +51,8 @@
                     <ul>
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="javascript:;">龙腾TV, <span></span>欢迎你 </a>
-                        </li>
-
-                        <!-- 新邮件 -->
-                        <li class="am-dropdown tpl-dropdown" data-am-dropdown>
-                            <a href="javascript:;" class="am-dropdown-toggle tpl-dropdown-toggle" data-am-dropdown-toggle>
-                                <i class="am-icon-envelope"></i>
-                                <span class="am-badge am-badge-success am-round item-feed-badge">4</span>
-                            </a>
-                            <!-- 弹出列表 -->
-                            <ul class="am-dropdown-content tpl-dropdown-content">
-                                <li class="tpl-dropdown-menu-messages">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
-                                        <div class="menu-messages-ico">
-                                            <img src="/houtai/img/user04.png" alt="">
-                                        </div>
-                                        <div class="menu-messages-time">
-                                            3小时前
-                                        </div>
-                                        <div class="menu-messages-content">
-                                            <div class="menu-messages-content-title">
-                                                <i class="am-icon-circle-o am-text-success"></i>
-                                                <span>夕风色</span>
-                                            </div>
-                                            <div class="am-text-truncate"> Amaze UI 的诞生，依托于 GitHub 及其他技术社区上一些优秀的资源；Amaze UI 的成长，则离不开用户的支持。 </div>
-                                            <div class="menu-messages-content-time">2016-09-21 下午 16:40</div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="tpl-dropdown-menu-messages">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
-                                        <div class="menu-messages-ico">
-                                            <img src="/houtai/img/user02.png" alt="">
-                                        </div>
-                                        <div class="menu-messages-time">
-                                            5天前
-                                        </div>
-                                        <div class="menu-messages-content">
-                                            <div class="menu-messages-content-title">
-                                                <i class="am-icon-circle-o am-text-warning"></i>
-                                                <span>白杨</span>
-                                            </div>
-                                            <div class="am-text-truncate"> 为了能最准确的传达所描述的问题， 建议你在反馈时附上演示，方便我们理解。 </div>
-                                            <div class="menu-messages-content-time">2018-02-16 上午 09:23</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="tpl-dropdown-menu-messages">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
-                                        <i class="am-icon-circle-o"></i> 进入列表…
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- 新提示 -->
-                        <li class="am-dropdown" data-am-dropdown>
-                            <a href="javascript:;" class="am-dropdown-toggle" data-am-dropdown-toggle>
-                                <i class="am-icon-bell"></i>
-                                <span class="am-badge am-badge-warning am-round item-feed-badge">5</span>
-                            </a>
-
-                            <!-- 弹出列表 -->
-                            <ul class="am-dropdown-content tpl-dropdown-content">
-                                <li class="tpl-dropdown-menu-notifications">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
-                                        <div class="tpl-dropdown-menu-notifications-title">
-                                            <i class="am-icon-line-chart"></i>
-                                            <span> 有6笔新的销售订单</span>
-                                        </div>
-                                        <div class="tpl-dropdown-menu-notifications-time">
-                                            12分钟前
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="tpl-dropdown-menu-notifications">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
-                                        <div class="tpl-dropdown-menu-notifications-title">
-                                            <i class="am-icon-star"></i>
-                                            <span> 有3个来自人事部的消息</span>
-                                        </div>
-                                        <div class="tpl-dropdown-menu-notifications-time">
-                                            30分钟前
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="tpl-dropdown-menu-notifications">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
-                                        <div class="tpl-dropdown-menu-notifications-title">
-                                            <i class="am-icon-folder-o"></i>
-                                            <span> 上午开会记录存档</span>
-                                        </div>
-                                        <div class="tpl-dropdown-menu-notifications-time">
-                                            1天前
-                                        </div>
-                                    </a>
-                                </li>
-
-
-                                <li class="tpl-dropdown-menu-notifications">
-                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">
-                                        <i class="am-icon-bell"></i> 进入列表…
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
+                            <a href="javascript:;">腾龙TV, <span></span>欢迎你 </a>
+                        </li>                 
                         <!-- 退出 -->
                         <li class="am-text-sm">
                             <a href="{{url('admins/login')}}">
@@ -196,7 +90,6 @@
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
               视频项目组
           </span>
-                    <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
                 </div>
             </div>
 
@@ -208,77 +101,58 @@
                         <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                     </a>
                 </li>
-                <li class="sidebar-nav-link">
-                    <a href="tables.html">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 管理员管理(暂未开放)
-                    </a>
-                </li>
-                 <li class="sidebar-nav-link">
+				
+				 <li class="sidebar-nav-link">
                     <a href="{{url('admins/users')}}">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 用户管理
-                       
-                    </a>
-                    
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 管理员管理  
+                    </a>           
                 </li>
+		
+                <li class="sidebar-nav-link">
+                    <a href="{{url('admins/user')}}">
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 用户管理
+                    </a>
+                </li>
+                
+				
                 <li class="sidebar-nav-link">
                     <a href="{{url('admins/video')}}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 视频管理
 
                     </a>
                 </li>
-                <li class="sidebar-nav-link">
-                    <a href="{{url('admins/videoUP')}}">
-                        <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传管理
-
-                    </a>
-                </li>
-                 <li class="sidebar-nav-link">
+            
+				
+				 <li class="sidebar-nav-link">
                     <a href="{{url('admins/upload')}}">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 上传视频
 
                     </a>
                 </li>
-
+				
+				
                <!--  <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li> -->
-                <li class="sidebar-nav-link">
-                    <a href="{{url('admins/column')}}">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 栏目管理
-                    
-                </li>
+               
                 <li class="sidebar-nav-link">
                     <a href="{{url('admins/ads')}}">
                         <i class="am-icon-clone sidebar-nav-link-logo"></i> 轮播图管理
                        
                     </a>
                 </li>    
-                <li class="sidebar-nav-link">
-                    <a href="404.html">
-                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 友情链接(暂未开放)
-                    </a>
-                </li>
+				
+               <!-- 暂时不写
                 <li class="sidebar-nav-link">
                     <a href="login.html">
                         <i class="am-icon-key sidebar-nav-link-logo"></i> 网站配置(暂未开放)
                     </a>
                 </li>
-                 <li class="sidebar-nav-link">
-                    <a href="{{url('admins/register')}}">
-                        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册
-                       
-                    </a>
-                </li>
-                <li class="sidebar-nav-link">
-                    <a href="{{url('admins/login')}}">
-                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
-                    </a>
-                </li>
-				<li class="sidebar-nav-link">
-                    <a href="{{url('404')}}">
-                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误
-                    </a>
-                </li>
+				-->
+                 
+            
+				
 
             </ul>
         </div>
+	</div>
 		<!-- 内容正文 -->
 		@yield('content')

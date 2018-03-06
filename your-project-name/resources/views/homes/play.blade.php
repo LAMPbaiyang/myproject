@@ -15,9 +15,6 @@
  <!---->
  <div class="Video_playback">
   
-
-  <div class="playback_title">{{$res[0]->title}}<span class="label_name"><a href="#">电影</a></span><span class="label_name"><a href="#">阿汤哥</a></span><span class="label_name"><a href="#">偶像</a></span></div>
- 
  
 <!-- jsModern播放插件 创建视频容器，设置明确宽高，不含任何内容 
  <div class="page_style clearfix col-md-8" id="video" style="width:800px;height:450px;margin-left:2px;">
@@ -36,7 +33,8 @@
 	<!-- </video>  -->
   
 <!-- 七牛播放器 -->
-  <h1>腾龙TV</h1>
+ 
+  <h2>{{$res[0]->title}}</h2>
     <video id="demo-video" class="video-js vjs-big-play-centered"></video>
 
 <!-- 七牛播放器 -->
@@ -50,34 +48,22 @@
   
    <div class="listcontrol_content">
    <div id="playerlist">
-    <div class="hd"><ul><li>选集<i class="jt"></i></li><li>介绍<i class="jt"></i></li></ul></div>
+    <div class="hd"><ul><li>视频描述<i class="jt"></i></li><li>介绍<i class="jt"></i></li></ul></div>
     <div class="bd" id="videomenu_style">
      <ul class="Episodes_list clearfix">
-
-      <li id="vli_0" onclick="playvideo(0)" class="volume selected"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">1</a></li>
-      <li id="vli_1" onclick="playvideo(1)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">2</a></li>
-      <li id="vli_2" onclick="playvideo(2)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">3</a></li>
-      <li id="vli_3" onclick="playvideo(3)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">4</a></li>
-      <li id="vli_4" onclick="playvideo(4)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">5</a></li>
-      <li id="vli_5" onclick="playvideo(5)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">6</a></li>
-      <li id="vli_6" onclick="playvideo(6)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">7</a></li>
-      <li id="vli_7" onclick="playvideo(7)" class="volume"><a href="javascript:void(0);" title="如果我爱你未删减版" rseat="sht_1">8<em class="icon_b icon_xin"></em></a></li>
+      <h3>{{$res[0]->miaoshu}}</h3>
+      
      </ul>
-     <ul>
-      <li class="clearfix marginq">
-      <div class="l_f information_img col-md-8"><img src="/qiantai/video/d9.jpg"></div>
-      <div class="r_f play_information_b col-md-4">
-       <dl>
-        <dt>如果我爱你未删减版</dt>
-        <dd class="mt10 clearfix"><label>地区：</label><span class="l_f"><a href="#">内地</a></span></dd>
-        <dd class="mt10 clearfix"><label>类型：</label><span class="l_f"><a href="#">情感生活</a></span></dd>
-        <dd class="mt10 clearfix"><label>导演：</label><span class="l_f"><a href="#">沈航</a></span></dd>
-        <dd class="mt10 clearfix"><label>主演：</label><span class="l_f"><a href="#">王茜华</a><a href="#">沈航</a><a href="#"> 陈思斯</a><a href="#"> 陈思斯</a></span></dd>
-       </dl>
-      </div>
-      </li>
-      <li class="marginq jieshao"><label>简介：</label>沈航执导，由王茜华、沈航等主演的都市情感剧。该剧讲述了单亲母亲黄大妮独自拉扯五个儿子，跨越30年风风雨雨的亲情故事。</li>
-     </ul>
+    
+       <li class="first_content bg">
+       
+        <img src="{{$res[0]->picpath}}"  width="100%"/>
+        <span class="first_bg"><i class="icon_bf"></i></span>
+      
+     </li>
+      <!-- <div class="l_f information_img col-md-8"><img src="{{$res[0]->picpath}}"  width="50px" height="50px"></div> -->
+     
+      
     </div>
     </div>
     <script>jQuery("#playerlist").slide({delayTime:0});</script>
@@ -128,7 +114,6 @@
   <!--评论-->
     <div class="col-md-9 ">
                                 <div class="chat-discussion">
-
                                    @foreach($com as $v)
                                     <div class="chat-message">
                                         <img class="message-avatar" src="{{ $v['uface'.$v->id] }}" alt="">
@@ -141,8 +126,6 @@
                                         </div>
                                     </div>
                                    @endforeach
-                                   
-
                                 </div>
 
     </div>
@@ -182,7 +165,7 @@
             </center>
             <br><br><br>
           @else
-                 <form action="{{url('homes/comment/'.$er[0]->fenlei)}}" method='post'>
+                 <form action="{{url('homes/comment/'.$res[0]->vid)}}" method='post'>
                           {{ csrf_field() }}
                           <input type="hidden" name="_method" value="put">
 
@@ -196,13 +179,12 @@
                             <div class="col-sm-">
                                 <div class="form-group">
                                   <br><br><br>
-                                  <button  class='btn' type='submit'>提交回复</button> 
+                                  <button  class='btn' type='submit'>提交评论</button> 
                                 </div>
                              </div>
                   </form>
           @endif    
                         
-
   </div>
  <!--评论框结束--> 
 <center>

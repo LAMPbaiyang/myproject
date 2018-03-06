@@ -52,9 +52,9 @@ tr:first-child th:last-child {
 <tr>
   <th></th>
   <center>
-    <th>ID</th>
     <th>评论视频</th>
     <th>评论文字</th>
+    <th>视频链接</th>
     <th>操作</th>
   </center>
 </tr>
@@ -62,9 +62,9 @@ tr:first-child th:last-child {
 @foreach($users as $v)
 <tr class="gradeX{{$v->id}}">
   <td></td>
-    <td>{{$v->name}}</td>
     <td>{{$v->video}}</td>
     <td>{{$v->comment}}</td>
+    <td><a href='{{url("homes/play/$v->vid")}}'>{{$v->video}}</a></td>
     <td>
     <button  class='btn' type='button' onclick="del({{$v->id}})">
       删除评论
@@ -85,7 +85,7 @@ tr:first-child th:last-child {
             layer.confirm('确定删除?',{
                 btn:['确定','取消']//按钮
                 },function(){
-                    $.post('{{url("homes/comment/")}}/'+id,{'_token':'{{csrf_token()}}','_method':'delete'},function(data){
+                    $.post('{{url("homes/pinglun/")}}/'+id,{'_token':'{{csrf_token()}}','_method':'delete'},function(data){
                         if(data == 1){
               var className = '.gradeX'+id;
               $(className).remove();

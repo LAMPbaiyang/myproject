@@ -18,9 +18,8 @@
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span><a href="{{url('admins/video/create')}}"> 新增</a></button>
-                                                
+                                            <div class="am-btn-group am-btn-group-xs">                  
+                                                 <a href="{{url('admins/video/create')}}"><button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -32,62 +31,93 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
-                                                <th>视频id</th>
-                                                <th>视频名字</th>
-                                                <th>视频图片</th>
-                                                <th>视频分类</th>
-												<th>like</th>
-                                                <th>操作</th>
+                                                <th>视频标题</th>
+                                                <th>视频概述</th>
+                                                <th>视频类别</th>
+    											<th>视频封面</th>
+                                                <th>视频资源</th>
+												<th>操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+
                                             @foreach($video as $v)
-                                            <tr class="gradeX">
-                                                <td class="am-text-middle">{{$v->vid}}</td>
-                                                <td class="am-text-middle">{{$v->vname}}</td>
-                                                <td class="am-text-middle">{{$v->vpic}}</td>
-                                                <td class="am-text-middle">{{$v->vsummary}}</td>
-												<td class="am-text-middle">{{$v->like}}</td>
+                                            <tr class="gradeX{{$v->vid}}">
+                                                <td class="am-text-middle">{{$v->title}}</td>
+												 <td class="am-text-middle">{{$v->miaoshu}}</td>
+                                                <td class="am-text-middle">{{$v->fenlei}}</td>
+                                                <td class="am-text-middle"> <img src="{{$v->picpath}}" class="tpl-table-line-img" alt=""></td>
+                                                <td class="am-text-middle">{{$v->videoname}}</td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                     <a href="javascript:;">
-                                                        <i class="am-icon-pencil"></i><a href="{{url('admins/video/'.$v->uid.'/edit')}}"> 修改</a>
+                                                        <i class="am-icon-pencil"></i><a href="{{url('admins/video/'.$v->vid.'/edit')}}"> 修改</a>
                                                     </a>
-                                                    <button id="del" class="am-btn-default am-text-danger" onclick="del({{$v->uid}})">
+                                                    <button id="del" class="am-btn-default am-text-danger" onclick="del({{$v->vid}})">
                                                         <i class="am-icon-trash"></i> 删除
                                                     </button>
                                                 </div>
                                                 </td>
                                             </tr>
                                              @endforeach
+
                                             <!-- more data -->
                                         </tbody>
                                     </table>
-                                </div>
-                                <div class="am-u-lg-12 am-cf">
+									 <!-- bootstrap分页-->
+									   <div class="container">
+											@foreach ($video as $v)
+												{{ $v->name }}
+											@endforeach
+										</div>
 
-                                    <div class="am-fr">
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
-                                        </ul>
-                                    </div>
+										{!! $video->render() !!}
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
+        </div>  
+
 <script src="/houtai/js/amazeui.min.js"></script>
- <script src="/houtai/js/app.js"></script>
+<script src="/houtai/js/amazeui.datatables.min.js"></script> 
+<script src="/houtai/js/dataTables.responsive.min.js"></script>
+<script src="/houtai/js/app.js"></script>
+
+@if(session('msg'))
+      <script>
+         alert("{{ session('msg') }}");
+      </script>
+ @endif
+    <script src="/houtai/layer/layer.js"></script>
+    <script>
+        function del(vid){
+            //alert(111);
+			
+			//ajax实现无刷新删除和更新页面
+            layer.confirm('确定删除?',{
+                btn:['确定','取消']//按钮
+                },function(){
+                    $.post('{{url("admins/video/")}}/'+vid,{'_token':'{{csrf_token()}}','_method':'delete'},function(data){
+					
+                        if(data == 1){
+							var className = '.gradeX'+vid;
+							$(className).remove();
+                            layer.msg('删除成功');
+                        }else{
+                            layer.msg('删除失败');
+                        }
+
+                    });
+                }    
+            );
+        }
+		
+		
+    </script>
+
 
 </body>
 

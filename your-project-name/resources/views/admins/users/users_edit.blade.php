@@ -8,12 +8,10 @@
             <div class="container-fluid am-cf">
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 添加用户 </div>
+                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 修改用户 </div>
                        
                     </div>
-                    <div class="am-u-lg-3 tpl-index-settings-button">
-                        <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置</button>
-                    </div>
+                    
                 </div>
 
             </div>
@@ -25,7 +23,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">添加用户表单</div>
+                                <div class="widget-title am-fl">修改管理员表单</div>
                                 <div class="widget-function am-fr">
                                     <a href="javascript:;" class="am-icon-cog"></a>
                                 </div>
@@ -54,27 +52,26 @@
 									<div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label">用户权限 <span class="tpl-form-line-small-title">auth</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="auth" id="user-auth" value="{{ ($info->auth==2)?'VIP用户':'普通用户'}}" placeholder="普通用户输入1/VIP用户输入2">    
-                                        </div>
-                                    </div>
-									<div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-3 am-form-label">用户状态 <span class="tpl-form-line-small-title">status</span></label>
-                                        <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" name="status" id="user-status" value="{{ ($info->auth==0)?'禁用用户':'启用用户'}}" placeholder="启用用户输入1/禁用用户输入0">    
+                                            <input type="text" class="tpl-form-input" name="auth" id="user-auth" value="{{ ($info->auth==2)?'超级管理员':'普通管理员'}}" placeholder="普通管理输入1/超级管理输入2">    
                                         </div>
                                     </div>
 									
 									
-									
-									
-                                 <!--    <div class="am-form-group">
+									 <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">用户密码 <span class="tpl-form-line-small-title">upass</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="am-form-field tpl-form-no-bg" placeholder="请输入8到30位正确密码" data-am-datepicker="" readonly="">
+                                            <input type="text" class="am-form-field tpl-form-no-bg" placeholder="请输入8到30位正确密码" value="{{$info->upass}}">
                                             
                                         </div>
                                     </div>
 									
+									
+									
+									
+									
+									
+									
+                                 <!--    
 									
                                     <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">确认密码 <span class="tpl-form-line-small-title">upass</span></label>

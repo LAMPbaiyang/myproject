@@ -60,6 +60,16 @@ class videoupController extends Controller
                 $fileNames = time().rand(1000,9999).'.'.$exts;
                 //执行上传
                 $files->move($paths, $fileNames);
+
+                // 封面上传
+                $tupian = $request->file('pic');
+                $stxe = $tupian->getClientOriginalExtension();
+               
+                $lujing = './qiantai/uploads/fengmian';
+                $picname = time().rand(1000,9999).'.'.$stxe;
+                $tupian->move($lujing, $picname);
+                $picpath = '/qiantai/uploads/fengmian'.'/'.$picname;
+
                 //获取当次上传的错误号
                 $nums = $files->getError();
                 if($nums > 0){
@@ -68,10 +78,9 @@ class videoupController extends Controller
                     $username = session('name');
                     $tit = $request->input('title');
                     $content = $request->input('desc');
-                    $time = time();
-                    $video = $paths.'/'.$fileNames;
+                    $videopath = '/qiantai/uploads/video'.'/'.$fileNames;
                     $videoname = $fileNames;
-                    DB::insert('insert into videoup (username, title, times, content, video,videoname) values (?, ?, ?, ?, ?, ?)', [$username,$tit, $time, $content, $video, $videoname]);
+                    DB::insert('insert into video (username, title, miaoshu, fenlei,picname,picpath,videoname,videopath) values (?, ?, ?, ?, ?, ?, ?, ?)', [$username,$tit, $content, 5,$picname, $picpath,$videoname,$videopath]);
                     return redirect('homes/center')->with('exts', '上传成功');
                 }
             }

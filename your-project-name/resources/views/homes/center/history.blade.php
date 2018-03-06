@@ -61,7 +61,7 @@ tr:first-child th:last-child {
   <td></td>
     <td>{{$v->name}}</td>
     <td>{{$v->video}}</td>
-    <td><a href="{{$v->src}}">{{$v->video}}</a></td>
+    <td><a href='{{url("homes/play/$v->src")}}'>{{$v->video}}</a></td>
 </tr>
  @endforeach 
 </table>

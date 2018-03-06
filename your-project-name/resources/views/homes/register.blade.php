@@ -38,10 +38,10 @@
     @endif
 
     <div>
-      <input type="text" name="name" class="name" placeholder="请输入用户名" oncontextmenu="return false" autocomplete="off" onpaste="return false" value="{{old('name')}}" />
+      <input type="text" name="name" class="name" placeholder="请设置用户名" oncontextmenu="return false" autocomplete="off" onpaste="return false" value="{{old('name')}}" />
     </div>
     <div>
-      <input type="password" name="password" class="password" placeholder="输入密码" oncontextmenu="return false"  autocomplete="off" onpaste="return false" value="{{old('password')}}" />
+      <input type="password" name="password" class="password" placeholder="请设置密码" oncontextmenu="return false"  autocomplete="off" onpaste="return false" value="{{old('password')}}" />
     </div>
 
     <div>

@@ -48,12 +48,48 @@ class loginController extends Controller
        $res = input::all();
 
         $user= user::where('name',$res['name'])->first();
-        session(['name'=>$user->name]);
 
-        if(session('codes') !== $res['codes']){
-            return back()->with('msg','登录失败');
+        if ($user == null) {
+
+             return back()->with('msg','用户不存在');
+
+        }else{
+
+            if( $user->quanxian == 0 ){
+
+                if(session('codes') !== $res['codes']){
+
+                return back()->with('msg','验证码错误');
+
+                }else{
+            
+                    if ($res['password'] == $user->password) {
+
+                        session(['name'=>$user->name]);
+
+                        return redirect('/')->with('msg','登录成功');
+
+                    }else{
+
+                        return back()->with('msg','密码错误');
+
+                    }
+
+                }
+
+            }else{
+
+                     return back()->with('msg','该账户已被禁用');
+            }
+
+            
+
         }
-        return redirect('/')->with('msg','登录成功');
+        
+       
+
+
+        
     }
  
     /**
@@ -103,10 +139,20 @@ class loginController extends Controller
 
      public function codes()
     {
+        // $builder = new CaptchaBuilder;
+        // $builder->build();
+        // session(['codes'=>$builder->getPhrase()]);
+        // header('Content-type: image/jpeg');
+        // $builder->output();
+
         $builder = new CaptchaBuilder;
         $builder->build();
+        
         session(['codes'=>$builder->getPhrase()]);
+        $builder->save('out.jpg');
+
         header('Content-type: image/jpeg');
+        header("Cache-Control: no-cache, must-revalidate");
         $builder->output();
     }
 

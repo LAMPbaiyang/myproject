@@ -31,7 +31,10 @@ class loginController extends Controller
 		$builder->build();
 		
 		session(['code'=>$builder->getPhrase()]);
+        $builder->save('out.jpg');
+
 		header('Content-type: image/jpeg');
+        header("Cache-Control: no-cache, must-revalidate");
 		$builder->output();
     }
 	
@@ -55,22 +58,42 @@ class loginController extends Controller
     public function store(Request $request)
     {
 		
-		//echo 11111;
-        $res = input::all();
+                //echo 11111;
+       $input = $request->except('_token'); 
 
-		$users= users::where('tel',$res['tel'])->first();
-		session(['tel'=>$users->tel]);
-		
-		
-		// if(session('upass') !== $res['upass']){
-			// return back()->with('msg','密码输入错误');
-		// }
-		
-		
-		if(session('code') !== $res['code']){
-			return back()->with('msg','登录失败');
-		}
-		return redirect('admins')->with('msg','登录成功');
+
+        $user = users::where('tel',$input['tel'])->first();
+    // dd($input['tel']);
+    // 
+    if(empty($input['code'])){
+        return back()->with('msg','请输入验证码');
+    }else{
+        if(empty($input['tel']))
+        {
+            
+            return back()->with('msg','请输入用户名');
+
+
+        }else{
+            if(session('code') !== $input['code']){
+
+            return back()->with('msg','验证码错误');
+
+            }else{
+
+                // dd($input['upass']);
+                if($user['upass'] == $input['upass'] ){
+                    
+                    session(['tel'=>$user->tel]);
+                    // dd($input['upass']);
+                   return redirect('admins')->with('msg','登录成功');  
+                }else{
+                    return back()->with('msg','账号或密码错误');
+                }
+            }
+        }
+        
+    }
     }
 
     /**

@@ -9,7 +9,6 @@
 <script src="/qiantai/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
 <script src="/qiantai/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/qiantai/js/common.js" type="text/javascript"></script>
-
 <!--聊天css-->
     <link href="/qiantai/css/bootstrap.min.css" rel="stylesheet">
     <link href="/qiantai/css/font-awesome.min.css" rel="stylesheet">
@@ -17,7 +16,20 @@
     <link href="/qiantai/css/animate.min.css" rel="stylesheet">
     <link href="/qiantai/css/style.min.css" rel="stylesheet">
 
-<title>列表页</title>
+<title>腾龙TV视频网站</title>
+
+<!--HTML5播放插件,运行良好 -->
+<!-- Chang URLs to wherever Video.js files will be hosted -->
+<link href="/qiantai/videoplayer/video-js.css" rel="stylesheet" type="text/css">
+<!-- video.js must be in the head for older IEs to work. -->
+<script src="/qiantai/videoplayer/video.js"></script>
+
+<!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+<script>
+videojs.options.flash.swf = "/qiantai/videoplayer/video-js.swf";
+</script>
+<!--HTML5播放插件,运行良好 -->
+
 </head>
 
 <body class="background_color">
@@ -32,22 +44,25 @@
      <a href="javascript:" class="Channel_name"><i class="i icon_nav"></i>频道<i class="i i_arw2"></i></a>
      <div class="Channel_nav_list">
   <ul class=" clearfix">
-         <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>电视剧</a></li>
-         <li class="Channel_color split_line"><a href="#"><i class="icon_TV"></i>电影</a></li>
-         <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>VIP专区</a></li>
-         <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>动漫</a></li>
-         <li class="Channel_color split_line"><a href="#" ><i class="icon_TV"></i>原创专区</a></li>
+		  <li class="Channel_color split_line"><a href="{{url('list')}}"><i class="icon_TV"></i>全部</a></li>
+         <li class="Channel_color split_line"><a href="{{url('detail/6')}}"><i class="icon_TV"></i>热播精选</a></li>
+         <li class="Channel_color split_line"><a href="{{url('detail/1')}}"><i class="icon_TV"></i>电影</a></li>
+         <li class="Channel_color split_line"><a href="{{url('detail/3')}}"><i class="icon_TV"></i>电视剧</a></li>
+         <li class="Channel_color split_line"><a href="{{url('detail/2')}}"><i class="icon_TV"></i>Vip专区</a></li>
+         <li class="Channel_color split_line"><a href="{{url('detail/4')}}"><i class="icon_TV"></i>动漫专区</a></li>
+		 <li class="Channel_color split_line"><a href="{{url('detail/5')}}"><i class="icon_TV"></i>原创专区</a></li>
   </ul>
      </div>
      </li>
     </ul>
 
     <div class="headsearch">
-    <form class="navbar-form navbar-left">
+     <form class="navbar-form navbar-left"  action="{{ url('homes/search') }}" method="post">
+      {{ csrf_field() }}
         <div class="form-group">
-          <input type="text" class="form-control"  placeholder="搜索">
+          <input type="text"  name=search  class="form-control"  placeholder="搜索">
         </div>
-        <button type="submit" class="btn btn-primary"><a href="{{url('search')}}">搜索</a></button>
+        <button type="submit" class="btn btn-primary">搜索</button>
       </form>
       <!-- <div style="font-size: 16px"><a href="#">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">开通VIP</a></div> -->
       <div class="nav pull-right">
@@ -57,7 +72,8 @@
           @else
                   <button  class='btn' type='button'><a href='{{ url('homes/center') }}'class='Channel_name'>{{session('name')}}</a></button>
                   <button  class='btn' type='button'><a href='{{ url('homes/center') }}'class='Channel_name'>个人中心</a></button>
-                  <button  class='btn' type='button'><a href='{{ url('#') }}'class='Channel_name'>开通VIP</a></button>
+                  <button  class='btn' type='button'><a href='{{ url('homes/huiyuan') }}'class='Channel_name'>开通VIP</a></button>
+				  <button  class='btn' type='button'><a href='{{ url('homes/exit') }}'class='Channel_name'>退出</a></button>
           @endif    
       </div>
 
@@ -69,6 +85,7 @@
 </div>
 </div>
 @yield('content')
+
 <!--底部样式-->
 <div class="footer_style">
 <div class="footer">
@@ -79,7 +96,9 @@
   <a href="#">节目制作经营许可证京字670号</a>
  </div>
 <div class="link_name">
-<a href="#">关于我们</a>|<a href="#">媒体合作</a>|<a href="#">开放平台</a>|<a href="#">广告服务</a>|<a href="#">联系我们</a>|<a href="#">工作机会</a>|<a href="#">友情链接</a></div>
+<a href="#">关于我们</a>|<a href="#">媒体合作</a>|<a href="#">开放平台</a>|<a href="#">广告服务</a>|<a href="#">联系我们</a>|<a href="#">工作机会</a>|<a href="#">友情链接</a>
+</div>
+
 <div class="Copyright">Copyright © 2004-2017 视频名称（xx.com）All rights reserved.</div>
 <div class="align clearfix">
  <a href="#"><img src="/qiantai/images/ghs.png" />&nbsp;京公网安备：xxxxxxxxxxxxxxxx号</a> &nbsp;&nbsp;&nbsp;
@@ -96,7 +115,4 @@
 </div>
 </body>
 </html>
-
-
-
 

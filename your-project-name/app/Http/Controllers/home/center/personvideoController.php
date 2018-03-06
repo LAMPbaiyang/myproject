@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
-use App\Http\Model\videoup;
+use App\Http\Model\video;
 use Illuminate\Support\Facades\Storage;
 
 class personvideoController extends Controller
@@ -20,7 +20,7 @@ class personvideoController extends Controller
     public function index()
     {
 
-        $users = videoup::where('username',session('name'))->get();
+        $users = video::where('username',session('name'))->get();
 
        return view('homes/center/personvideo',compact('users'));
     }
@@ -91,14 +91,14 @@ class personvideoController extends Controller
      */
     public function destroy($vid)
     {
-        $filePath = videoup::where('vid',$vid)->value('videoname');
+        $filePath = video::where('vid',$vid)->value('videoname');
            //$base_path = base_path().'/public';
           // return $base_path;
          $r = Storage::delete("$filePath");
 
         
 
-       $res = videoup::where('vid',$vid)->delete();
+       $res = video::where('vid',$vid)->delete();
 
         return 1;
     }

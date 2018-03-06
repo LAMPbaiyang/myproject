@@ -92,12 +92,26 @@ h4 { margin-top: 30px;}
             <input type="text" name="desc" value="" placeholder="Banner Name" id="input-banner-name" class="form-control" />
             </div>
             </div>
+            <br>
+        <div class="" >
+          <input type="file" name="pic" class="input-file" >
+          <div class="input-group col-xs-12" style="float:right;">
+            <span class="input-group-addon"><i class="fa fa-video-camera"></i></span>
+            <input type="text" class="form-control" disabled placeholder="上传视频封面">
+            <span class="input-group-btn">
+              <button class="upload-field btn btn-success" type="button"><i class="fa fa-search"></i> 选择上传</button>
+            </span>
+          </div>
+        </div>
 				<br>
+        <br>
+        <br>
+       
 				<div class="" >
 					<input type="file" name="video" class="input-file" >
 					<div class="input-group col-xs-12" style="float:right;">
 						<span class="input-group-addon"><i class="fa fa-video-camera"></i></span>
-						<input type="text" class="form-control" disabled placeholder="Upload Video">
+						<input type="text" class="form-control" disabled placeholder="上传视频文件">
 						<span class="input-group-btn">
 							<button class="upload-field btn btn-success" type="button"><i class="fa fa-search"></i> 选择上传</button>
 						</span>

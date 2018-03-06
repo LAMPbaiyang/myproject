@@ -28,7 +28,7 @@
                             </div>
                             <div class="input_outer">
                                 <span class="us_uer"></span>
-                                <input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="text" placeholder="请输入密码">
+                                <input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
                             </div>
                             <div class="input_outer">
                                 <span class="us_uer"></span>
@@ -37,7 +37,7 @@
                             </div>
                                 <div>
                                     <center>
-                                    <img src="{{url('homes/codes')}}">
+                                    <a onclick="javascript:re_captcha();" ><img src="{{ url('homes/codes/1/1') }}"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a>
                                     </center>
                                 </div>
                                
@@ -55,6 +55,16 @@
         <div style="text-align:center;">
 </div>
     </body>
+    <script>  
+      function re_captcha() {
+        $url = "{{ URL('homes/codes/1') }}";
+            $url = $url + "/" + Math.random();
+            document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
+
+
+      }
+    </script>
+
             @if (session('msg'))
             <script>
                 alert("{{ session('msg') }}");

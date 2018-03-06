@@ -61,10 +61,21 @@
 
                     </div>
 					
-					<div class="am-form-group">
+				<!-- 	<div class="am-form-group">
                         <input type="text" class="tpl-form-input" name="code" id="user-code" placeholder="请输入验证码">
 						<img src="{{url('admins/code')}}">
+                    </div> -->
+
+                    <div class="am-form-group">
+                        <input type="text" class="tpl-form-input" name="code" id="user-code" placeholder="请输入验证码">
+                        
+                        <a onclick="javascript:re_captcha();" ><img src="{{ url('admins/code/2/1') }}"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a>
+                        记住密码
+                         </label>
+
+
                     </div>
+
                     <div class="am-form-group tpl-login-remember-me">
                         <input id="remember-me" type="checkbox">
                         <label for="remember-me">
@@ -91,6 +102,15 @@
 	
     <script src="/houtai/js/amazeui.min.js"></script>
     <script src="/houtai/js/app.js"></script>
+    <script>  
+      function re_captcha() {
+        $url = "{{ URL('admins/code/2') }}";
+            $url = $url + "/" + Math.random();
+            document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
+
+
+      }
+    </script>
 </body>
 
 </html>

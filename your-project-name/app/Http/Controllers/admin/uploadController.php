@@ -29,7 +29,7 @@ class uploadController extends Controller
      */
     public function create()
     {
-         return view('admins/videoUP/videoUP_add');
+        //
     }
 
     /**
@@ -40,24 +40,29 @@ class uploadController extends Controller
      */
     public function store(Request $request)
     {
-    
-
         $tit = $request->input('title');
-        $miaoshu = $request->input('desc');
+        $miaoshu = $request->input('miaoshu');
         $fenlei = $request->input('fenlei');
-        $pic = $request->input('art_thumb');
+        $pic = $request->input('picname');
+        if(empty($pic)) {
+            return redirect()->back()->with('msg', '图片不能为空!');
+        }
         $picpath = 'http://os4vho7yf.bkt.clouddn.com/fengmian'.'/'.$pic;
-        $video = $request->input('zhenshi');
+        //"zhenshi"上传视频七牛云返回的视频名称 改名为video
+        $video = $request->input('videoname');
+        if(empty($video)) {
+            return redirect()->back()->with('msg', '视频文件不能为空!');
+        }
         $videopath = 'http://os4vho7yf.bkt.clouddn.com/shipin'.'/'.$video;
+        
         $res = DB::insert('insert into video(title, miaoshu, fenlei, picname, picpath,videoname, videopath, videovip) values (?,?,?, ?, ?, ?, ?,?)', [$tit,$miaoshu,$fenlei,$pic,$picpath,$video,$videopath,1]);
 
         if (!empty($res)) {
-            return redirect('admins/upload')->with('msg', '上传成功');
+            return redirect('admins/video')->with('msg', '上传成功');
         }else{
             return redirect('admins/upload')->with('msg', '上传失败');
 
         }
-       
     }
 
     /**
@@ -104,10 +109,12 @@ class uploadController extends Controller
     {
         //
     }
-
+    
+    
+    //后台上传视频封面
     public function up(Request $request)
     {
-        $load = $request->file('file_upload');
+        $load = $request->file('picpath');
 
         $ext = $load->getClientOriginalExtension();
         $newpic = time().rand(1000,9999).'.'.$ext;
@@ -119,10 +126,10 @@ class uploadController extends Controller
         $res=$disk->put('fengmian/'.$newpic,$realPath);
         return $newpic;
     }
-
+    //后台上传视频文件
     public function vup(Request $request)
     {
-        $load = $request->file('videoup');
+        $load = $request->file('videopath');
 
         $ext = $load->getClientOriginalExtension();
         $newvideo = time().rand(1000,9999).'.'.$ext;
@@ -134,10 +141,12 @@ class uploadController extends Controller
         $disk = QiniuStorage::disk('qiniu');
 
         // $res = $disk->put('shipin/'.$newvideo,fopen("$fileName",'r+'));
-
-       
-                               
+                              
         $res=$disk->put('shipin/'.$newvideo,$realPath);
          return $newvideo;
     }
+    
+    
+    
+    
 }

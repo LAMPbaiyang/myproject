@@ -13,7 +13,7 @@
 						<dt class="pull-left">
 						<p class="account-head">
 							@if(empty($center->uface))
-							<img src='/qiantai/center/img/noface.gif'>
+							<img src='/qiantai/center/img/noface.png'>
 							@else
 							<img src='{{$center->uface}}'>
 							@endif 

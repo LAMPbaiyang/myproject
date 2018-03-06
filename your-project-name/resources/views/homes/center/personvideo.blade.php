@@ -65,8 +65,8 @@ tr:first-child th:last-child {
   <td></td>
     <td>{{$v->username}}</td>
     <td>{{$v->title}}</td>
-    <td>{{$v->content}}</td>
-    <td><a href="{{$v->video}}">{{$v->title}}</a></td>
+    <td>{{$v->miaoshu}}</td>
+    <td><a href='{{url("homes/play/$v->vid")}}'>{{$v->title}}</a></td>
     <td>
     <button  class='btn' type='button' onclick="del({{$v->vid}})">
       删除视频

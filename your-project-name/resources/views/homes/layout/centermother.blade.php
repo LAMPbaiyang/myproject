@@ -21,12 +21,12 @@
   </div>
   <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
-      <li class="li-border"><a class="mystyle-color" href="#">首页</a></li>
-      <li class="li-border"><a class="mystyle-color" href="#">个人中心</a></li>
+      <li class="li-border"><a class="mystyle-color" href="/">首页</a></li>
+      <li class="li-border"><a class="mystyle-color" href="{{ url('homes/center') }}">个人中心</a></li>
     </ul>
     <ul class="nav navbar-nav pull-right"> 
-      <li class="dropdown li-border"><a href="{{ url('homes/center') }}" class="dropdown-toggle mystyle-color" data-toggle="dropdown">{{session('name')}}</a></li>
-      <li class="dropdown li-border"><a href="{{ url('homes/huiyuan') }}" class="dropdown-toggle mystyle-color" data-toggle="dropdown">开通会员</a></li>
+      <li class="dropdown li-border"><a href='#' class="dropdown-toggle mystyle-color" data-toggle="dropdown">{{session('name')}}</a></li>
+      <li class="dropdown li-border"><a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">开通会员</a></li>
       <li class="dropdown li-border"><a href="#" class="dropdown-toggle mystyle-color" data-toggle="dropdown">退出</a></li>
     </ul>
   </div>
@@ -53,8 +53,8 @@
             <div class="showtitle" style="width:100px;"><img src="/qiantai/center/img/leftimg.png" />开通会员</div>
             <a href="{{ url('homes/huiyuan') }}"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">开通会员</span></a> </li>
            <li>
-            <div class="showtitle" style="width:100px;"><img src="/qiantai/center/img/leftimg.png" />开通会员</div>
-            <a href="{{ url('homes/comment') }}"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">我的评论</span></a> </li>
+            <div class="showtitle" style="width:100px;"><img src="/qiantai/center/img/leftimg.png" />我的评论</div>
+            <a href="{{ url('homes/pinglun') }}"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">我的评论</span></a> </li>
           <li>
             <div class="showtitle" style="width:100px;"><img src="/qiantai/center/img/leftimg.png" />上传视频</div>
             <a href="{{ url('homes/videoup') }}"><span class="sublist-icon glyphicon glyphicon-bullhorn"></span><span class="sub-title">上传视频</span></a></li>
