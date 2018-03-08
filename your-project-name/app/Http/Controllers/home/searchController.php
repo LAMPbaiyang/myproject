@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\video;
 
 class searchController extends Controller
 {
@@ -16,7 +17,7 @@ class searchController extends Controller
      */
     public function index()
     {
-        return view('homes/search');
+       // return view('homes/search');
     }
 
     /**
@@ -37,7 +38,11 @@ class searchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		//获取搜索值 并模糊查询数据库video表里的title字段
+          $comment = $request['search'];
+          $ri  = video::where('title','like',"%$comment%")->get();
+          return view('homes/search',compact('ri'));
+
     }
 
     /**

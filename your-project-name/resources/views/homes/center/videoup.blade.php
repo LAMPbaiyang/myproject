@@ -93,12 +93,23 @@ h4 { margin-top: 30px;}
             </div>
             </div>
 				<br>
+	    <div class="" >
+			<input type="file" name="pic" class="input-file" >
+			<div class="input-group col-xs-12" style="float:right;">
+			<span class="input-group-addon"><i class="fa fa-video-camera"></i></span>
+				<input type="text" class="form-control" disabled placeholder="Upload Pic">
+			<span class="input-group-btn">
+				  <button class="upload-field btn btn-success" type="button"><i class="fa fa-search"></i> 选择上传</button>
+            </span>
+          </div>
+        </div>
+				<br>
 				<div class="" >
-					<input type="file" name="video" class="input-file" >
+				   <input type="file" name="video" class="input-file" >
 					<div class="input-group col-xs-12" style="float:right;">
 						<span class="input-group-addon"><i class="fa fa-video-camera"></i></span>
-						<input type="text" class="form-control" disabled placeholder="Upload Video">
-						<span class="input-group-btn">
+							<input type="text" class="form-control" disabled placeholder="Upload Video">
+							<span class="input-group-btn">
 							<button class="upload-field btn btn-success" type="button"><i class="fa fa-search"></i> 选择上传</button>
 						</span>
 					</div>

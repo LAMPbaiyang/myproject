@@ -92,6 +92,6 @@ class commentController extends Controller
     {
          $res = comment::where('id',$id)->delete();
         // dd($res);
-      return $res;
+		return $res;
     }
 }

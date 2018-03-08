@@ -45,6 +45,9 @@
 						<p class="text-small">
 							<span class="show pull-left base-name">个人邮箱</span>:<span class="margin-left">{{$center->email}}</span>
 						</p>
+						<p class="text-small">
+							<span class="show pull-left base-name">个人积分</span>:<span class="margin-left">{{session('score')}}</span>
+						</p>
 					</dl>
 				</div>
 	</div>

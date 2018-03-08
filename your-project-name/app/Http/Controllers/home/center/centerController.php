@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Http\Model\user;
 
+use Session;
+
 class centerController extends Controller
 {
     /**
@@ -133,7 +135,14 @@ class centerController extends Controller
             
         }else{
             return redirect('homes/center/'.session('name').'/edit')->with('msg', '请添加图片');
-        }
+			}
+		}
     }
-    }
+	
+	 public function exit(Request $request)
+	{
+		session()->flush();
+		return redirect('/')->with('msg','注销成功');
+	}
+	 
 }

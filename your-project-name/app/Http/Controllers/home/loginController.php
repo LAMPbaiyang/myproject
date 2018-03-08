@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Model\user;
 use Gregwar\Captcha\CaptchaBuilder;
 use Session;
+use DB;
+
 
 class loginController extends Controller
 {
@@ -24,6 +26,10 @@ class loginController extends Controller
        
        return view('homes/login');
     }
+
+
+    
+
 
     /**
      * Show the form for creating a new resource.
@@ -46,12 +52,31 @@ class loginController extends Controller
        $res = input::all();
 
         $user= user::where('name',$res['name'])->first();
-        session(['name'=>$user->name]);
+       if ($user == null) {
 
-        if(session('codes') !== $res['codes']){
-            return back()->with('msg','登录失败');
+             return back()->with('msg','用户不存在');
+
+        }else{
+
+            if( $user->quanxian == 0 ){
+
+                if(session('codes') !== $res['codes']){
+                return back()->with('msg','验证码错误');
+                }else{           
+                    if ($res['password'] == $user->password) {
+                        session(['name'=>$user->name]);
+						session(['score'=>$user->score]);
+                        DB::table('user')->where('id',$user->id)->increment('score', 5); 
+                        return redirect('/')->with('msg','登录成功');
+                    }else{
+                        return back()->with('msg','密码错误');
+                    }
+                }
+
+            }else{
+                     return back()->with('msg','该账户已被禁用');
+            }
         }
-        return redirect('/')->with('msg','登录成功');
     }
 
     /**
@@ -104,7 +129,10 @@ class loginController extends Controller
         $builder = new CaptchaBuilder;
         $builder->build();
         session(['codes'=>$builder->getPhrase()]);
+        $builder->save('out.jpg');
+
         header('Content-type: image/jpeg');
+        header("Cache-Control: no-cache, must-revalidate");
         $builder->output();
     }
 }

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Http\JsonResponse;  
 use App\Http\Model\users;
 use Gregwar\Captcha\CaptchaBuilder;
+//使用users数据表查询数据
 use Session;
 
 class loginController extends Controller
@@ -30,7 +31,10 @@ class loginController extends Controller
 		$builder->build();
 		
 		session(['code'=>$builder->getPhrase()]);
+        $builder->save('out.jpg');
+	
 		header('Content-type: image/jpeg');
+		header("Cache-Control: no-cache, must-revalidate");
 		$builder->output();
     }
 	
